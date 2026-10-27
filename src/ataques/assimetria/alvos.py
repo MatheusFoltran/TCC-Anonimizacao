@@ -22,17 +22,17 @@ else:
     from src.utils.comum import carregar_csv, exportar_xlsx
 
 
-def gerar_alvos(base_atributo: pd.DataFrame, limite: int = 10) -> pd.DataFrame:
+def gerar_alvos(base_atributo: pd.DataFrame, limite: int = 10, semente: int = RANDOM_SEED) -> pd.DataFrame:
     # Sorteio em duas etapas: primeiro o bloco, depois o VALOR do alvo dentro
     # dele, ponderado por contagem_local — equivale a sortear uma pessoa real
     # ao acaso dentre as do bloco, sem viés pra valores minoritários.
     blocos = base_atributo.drop_duplicates("chave_bloco")
-    blocos_sorteados = blocos.sample(n=min(limite, len(blocos)), random_state=RANDOM_SEED)
+    blocos_sorteados = blocos.sample(n=min(limite, len(blocos)), random_state=semente)
 
     alvos = []
     for _, bloco in blocos_sorteados.iterrows():
         candidatos_valor = base_atributo[base_atributo["chave_bloco"] == bloco["chave_bloco"]]
-        alvo = candidatos_valor.sample(n=1, weights="contagem_local", random_state=RANDOM_SEED).iloc[0]
+        alvo = candidatos_valor.sample(n=1, weights="contagem_local", random_state=semente).iloc[0]
         alvos.append(alvo)
 
     amostra = pd.DataFrame(alvos).reset_index(drop=True)

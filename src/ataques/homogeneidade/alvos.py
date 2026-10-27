@@ -33,7 +33,7 @@ def _juntar_valores_distintos(valores_do_grupo: pd.Series) -> str:
     return "|".join(sorted(distintos))
 
 
-def gerar_alvos_homogeneo(df_homogeneo_atributo: pd.DataFrame, limite: int = 10) -> pd.DataFrame:
+def gerar_alvos_homogeneo(df_homogeneo_atributo: pd.DataFrame, limite: int = 10, semente: int = RANDOM_SEED) -> pd.DataFrame:
     # Amostra `limite` classes homogêneas com tamanho > 1: grupos de tamanho
     # 1 são excluídos por serem trivialmente identificáveis sem o ataque.
     validar_colunas(df_homogeneo_atributo)
@@ -45,7 +45,7 @@ def gerar_alvos_homogeneo(df_homogeneo_atributo: pd.DataFrame, limite: int = 10)
     df = df[df["tamanho_grupo_qi"].astype(str).str.strip().astype(int) > 1]
 
     grupos = df.drop_duplicates("chave_qi")
-    amostra = grupos.sample(n=min(limite, len(grupos)), random_state=RANDOM_SEED).reset_index(drop=True)
+    amostra = grupos.sample(n=min(limite, len(grupos)), random_state=semente).reset_index(drop=True)
     amostra.insert(0, "alvo_id", amostra.index + 1)
     amostra.insert(1, "nome", [f"Alvo Homogeneo {i+1}" for i in range(len(amostra))])
 
@@ -54,7 +54,7 @@ def gerar_alvos_homogeneo(df_homogeneo_atributo: pd.DataFrame, limite: int = 10)
     return amostra[["alvo_id", "nome"] + QI_COLUNAS]
 
 
-def gerar_alvos_heterogeneo(df_base: pd.DataFrame, sensivel_col: str = "EVOLUCAO", limite: int = 10) -> pd.DataFrame:
+def gerar_alvos_heterogeneo(df_base: pd.DataFrame, sensivel_col: str = "EVOLUCAO", limite: int = 10, semente: int = RANDOM_SEED) -> pd.DataFrame:
     # Amostra `limite` grupos heterogêneos (mais de um valor distinto de
     # sensivel_col) — controle negativo.
     validar_colunas(df_base, sensivel_col)
@@ -67,7 +67,7 @@ def gerar_alvos_heterogeneo(df_base: pd.DataFrame, sensivel_col: str = "EVOLUCAO
     df_het = df_base[valores_distintos > 1].copy()
     df_het["valores_no_grupo"] = valores_lista[valores_distintos > 1]
     grupos = df_het.drop_duplicates("chave_qi")
-    amostra = grupos.sample(n=min(limite, len(grupos)), random_state=RANDOM_SEED).reset_index(drop=True)
+    amostra = grupos.sample(n=min(limite, len(grupos)), random_state=semente).reset_index(drop=True)
     amostra.insert(0, "alvo_id", amostra.index + 1)
     amostra.insert(1, "nome", [f"Alvo Heterogeneo {i+1}" for i in range(len(amostra))])
 

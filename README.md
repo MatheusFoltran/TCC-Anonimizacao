@@ -25,6 +25,10 @@ O risco residual é estimado pela simulação de dois ataques de inferência:
 - **ataque de assimetria**, contra blocos que já satisfazem *ℓ*-diversidade,
   medido pela razão entre a frequência local e a global do valor sensível.
 
+Nos dois ataques, o sorteio de 10 alvos por atributo sensível é repetido com
+30 sementes (`replicacoes.py`), e a taxa de sucesso é resumida pela média e
+pelo desvio padrão das replicações.
+
 A perda de utilidade é medida pela *Discernibility Metric* (DM) e pelo
 *Normalized Certainty Penalty* (NCP).
 

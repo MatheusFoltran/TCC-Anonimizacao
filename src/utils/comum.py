@@ -31,6 +31,10 @@ SENSIVEL_COLUNAS = ["EVOLUCAO", "CLASSI_FIN"]
 # para reprodutibilidade.
 RANDOM_SEED = 10
 
+# Sementes das 30 replicações dos sorteios de alvos. Inclui RANDOM_SEED, de
+# modo que a amostra relatada individualmente é uma das replicações.
+SEMENTES_REPLICACAO = list(range(1, 31))
+
 
 def normalizar_qi_sensivel(df: pd.DataFrame) -> pd.DataFrame:
     colunas = [c for c in QI_COLUNAS + SENSIVEL_COLUNAS if c in df.columns]

@@ -1,0 +1,110 @@
+{
+  "descricao": "Taxa de sucesso do ataque de assimetria em replicacoes do sorteio de alvos, uma por semente, para cada patamar de razao de risco.",
+  "sementes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "razoes_avaliadas": [
+    2.0,
+    5.0,
+    10.0
+  ],
+  "por_atributo_sensivel": [
+    {
+      "atributo_sensivel": "EVOLUCAO",
+      "replicacoes": 30,
+      "alvos_por_replicacao": 10,
+      "taxa_sucesso_por_razao": [
+        {
+          "razao_minima": 2.0,
+          "media": 29.0,
+          "desvio_padrao": 25.24,
+          "minimo": 0.0,
+          "maximo": 80.0
+        },
+        {
+          "razao_minima": 5.0,
+          "media": 10.67,
+          "desvio_padrao": 13.88,
+          "minimo": 0.0,
+          "maximo": 50.0
+        },
+        {
+          "razao_minima": 10.0,
+          "media": 9.0,
+          "desvio_padrao": 11.55,
+          "minimo": 0.0,
+          "maximo": 40.0
+        }
+      ],
+      "razao_risco_media": {
+        "media": 3.18,
+        "desvio_padrao": 2.82,
+        "minimo": 0.74,
+        "maximo": 10.94
+      }
+    },
+    {
+      "atributo_sensivel": "CLASSI_FIN",
+      "replicacoes": 30,
+      "alvos_por_replicacao": 10,
+      "taxa_sucesso_por_razao": [
+        {
+          "razao_minima": 2.0,
+          "media": 18.0,
+          "desvio_padrao": 16.27,
+          "minimo": 0.0,
+          "maximo": 60.0
+        },
+        {
+          "razao_minima": 5.0,
+          "media": 5.67,
+          "desvio_padrao": 10.4,
+          "minimo": 0.0,
+          "maximo": 40.0
+        },
+        {
+          "razao_minima": 10.0,
+          "media": 5.0,
+          "desvio_padrao": 9.74,
+          "minimo": 0.0,
+          "maximo": 40.0
+        }
+      ],
+      "razao_risco_media": {
+        "media": 2.83,
+        "desvio_padrao": 4.17,
+        "minimo": 0.77,
+        "maximo": 23.07
+      }
+    }
+  ]
+}
