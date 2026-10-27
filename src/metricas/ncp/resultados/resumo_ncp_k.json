@@ -1,0 +1,84 @@
+{
+  "arquivo_entrada": "base_filtrada/dados_filtro_base.csv",
+  "descricao": "Normalized Certainty Penalty (Xu et al., KDD'06) sobre os 5 QI, por valor de k. antes = funil rodado sobre a base bruta filtrada, sem nenhuma tecnica aplicada; depois = mesma generalizacao/supressao usada em k_anonimato.py.",
+  "antes": {
+    "momento": "antes",
+    "total_registros": 137244,
+    "total_grupos": 129422,
+    "por_k": [
+      {
+        "k": 2,
+        "ncp": 619772.2006,
+        "ncp_maximo_teorico": 686220.0,
+        "ncp_normalizado": 0.903168
+      },
+      {
+        "k": 3,
+        "ncp": 675701.2711,
+        "ncp_maximo_teorico": 686220.0,
+        "ncp_normalizado": 0.984671
+      },
+      {
+        "k": 4,
+        "ncp": 684345.5086,
+        "ncp_maximo_teorico": 686220.0,
+        "ncp_normalizado": 0.997268
+      },
+      {
+        "k": 5,
+        "ncp": 685712.0443,
+        "ncp_maximo_teorico": 686220.0,
+        "ncp_normalizado": 0.99926
+      }
+    ]
+  },
+  "depois": {
+    "momento": "depois",
+    "total_registros": 137244,
+    "total_grupos": 17441,
+    "por_k": [
+      {
+        "k": 2,
+        "ncp": 117669.5576,
+        "ncp_maximo_teorico": 686220.0,
+        "ncp_normalizado": 0.171475
+      },
+      {
+        "k": 3,
+        "ncp": 139493.8723,
+        "ncp_maximo_teorico": 686220.0,
+        "ncp_normalizado": 0.203279
+      },
+      {
+        "k": 4,
+        "ncp": 156543.9763,
+        "ncp_maximo_teorico": 686220.0,
+        "ncp_normalizado": 0.228125
+      },
+      {
+        "k": 5,
+        "ncp": 171379.4884,
+        "ncp_maximo_teorico": 686220.0,
+        "ncp_normalizado": 0.249744
+      }
+    ]
+  },
+  "reducao_percentual_ncp_por_k": [
+    {
+      "k": 2,
+      "reducao_percentual_ncp": 81.0141
+    },
+    {
+      "k": 3,
+      "reducao_percentual_ncp": 79.3557
+    },
+    {
+      "k": 4,
+      "reducao_percentual_ncp": 77.125
+    },
+    {
+      "k": 5,
+      "reducao_percentual_ncp": 75.0071
+    }
+  ]
+}

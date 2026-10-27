@@ -1,0 +1,97 @@
+{
+  "arquivo_entrada": "src/modelos/k_anonimato/resultados/candidatos.csv",
+  "total_registros_entrada": 137244,
+  "por_atributo_sensivel": [
+    {
+      "atributo_sensivel": "EVOLUCAO",
+      "total_registros_avaliados": 124960,
+      "total_registros_nulos_excluidos": 12284,
+      "total_grupos": 16735,
+      "distribuicao_distintos": {
+        "1": 10745,
+        "2": 4316,
+        "3": 1404,
+        "4": 270
+      },
+      "emd_media": 0.3486,
+      "emd_mediana": 0.2934,
+      "emd_maxima": 0.9856,
+      "por_t": [
+        {
+          "t": 0.1,
+          "grupos_viola_t": 15140,
+          "percentual_grupos_viola_t": 90.4691,
+          "registros_viola_t": 88164,
+          "percentual_registros_viola_t": 70.5538
+        },
+        {
+          "t": 0.15,
+          "grupos_viola_t": 14480,
+          "percentual_grupos_viola_t": 86.5252,
+          "registros_viola_t": 66914,
+          "percentual_registros_viola_t": 53.5483
+        },
+        {
+          "t": 0.2,
+          "grupos_viola_t": 13686,
+          "percentual_grupos_viola_t": 81.7807,
+          "registros_viola_t": 48897,
+          "percentual_registros_viola_t": 39.1301
+        },
+        {
+          "t": 0.3,
+          "grupos_viola_t": 3998,
+          "percentual_grupos_viola_t": 23.8901,
+          "registros_viola_t": 9919,
+          "percentual_registros_viola_t": 7.9377
+        }
+      ]
+    },
+    {
+      "atributo_sensivel": "CLASSI_FIN",
+      "total_registros_avaliados": 136940,
+      "total_registros_nulos_excluidos": 304,
+      "total_grupos": 17407,
+      "distribuicao_distintos": {
+        "1": 11449,
+        "2": 4772,
+        "3": 1061,
+        "4": 118,
+        "5": 7
+      },
+      "emd_media": 0.3368,
+      "emd_mediana": 0.2882,
+      "emd_maxima": 0.9985,
+      "por_t": [
+        {
+          "t": 0.1,
+          "grupos_viola_t": 15654,
+          "percentual_grupos_viola_t": 89.9293,
+          "registros_viola_t": 98652,
+          "percentual_registros_viola_t": 72.0403
+        },
+        {
+          "t": 0.15,
+          "grupos_viola_t": 14765,
+          "percentual_grupos_viola_t": 84.8222,
+          "registros_viola_t": 73770,
+          "percentual_registros_viola_t": 53.8703
+        },
+        {
+          "t": 0.2,
+          "grupos_viola_t": 14072,
+          "percentual_grupos_viola_t": 80.841,
+          "registros_viola_t": 50690,
+          "percentual_registros_viola_t": 37.0162
+        },
+        {
+          "t": 0.3,
+          "grupos_viola_t": 3807,
+          "percentual_grupos_viola_t": 21.8705,
+          "registros_viola_t": 16744,
+          "percentual_registros_viola_t": 12.2273
+        }
+      ]
+    }
+  ]
+}

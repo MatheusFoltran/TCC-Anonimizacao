@@ -1,0 +1,92 @@
+{
+  "arquivo_entrada": "base_filtrada/dados_filtro_base.csv",
+  "descricao": "Discernibility Metric (Bayardo & Agrawal, 2005) sobre blocos de quase-identificador puro, por valor de k. antes = funil rodado sobre a base bruta filtrada, sem nenhuma tecnica aplicada; depois = mesma generalizacao/supressao usada em k_anonimato.py.",
+  "antes": {
+    "momento": "antes",
+    "total_registros": 137244,
+    "total_grupos": 129422,
+    "por_k": [
+      {
+        "k": 2,
+        "dm": 16807207180,
+        "dm_minimo_teorico": 274488,
+        "dm_maximo_teorico": 18835915536,
+        "dm_normalizado": 0.892296
+      },
+      {
+        "k": 3,
+        "dm": 18514772144,
+        "dm_minimo_teorico": 411732,
+        "dm_maximo_teorico": 18835915536,
+        "dm_normalizado": 0.98295
+      },
+      {
+        "k": 4,
+        "dm": 18778686587,
+        "dm_minimo_teorico": 548976,
+        "dm_maximo_teorico": 18835915536,
+        "dm_normalizado": 0.996962
+      },
+      {
+        "k": 5,
+        "dm": 18820407547,
+        "dm_minimo_teorico": 686220,
+        "dm_maximo_teorico": 18835915536,
+        "dm_normalizado": 0.999177
+      }
+    ]
+  },
+  "depois": {
+    "momento": "depois",
+    "total_registros": 137244,
+    "total_grupos": 17441,
+    "por_k": [
+      {
+        "k": 2,
+        "dm": 1130789621,
+        "dm_minimo_teorico": 274488,
+        "dm_maximo_teorico": 18835915536,
+        "dm_normalizado": 0.060034
+      },
+      {
+        "k": 3,
+        "dm": 1808216133,
+        "dm_minimo_teorico": 411732,
+        "dm_maximo_teorico": 18835915536,
+        "dm_normalizado": 0.095998
+      },
+      {
+        "k": 4,
+        "dm": 2337691911,
+        "dm_minimo_teorico": 548976,
+        "dm_maximo_teorico": 18835915536,
+        "dm_normalizado": 0.124108
+      },
+      {
+        "k": 5,
+        "dm": 2798269351,
+        "dm_minimo_teorico": 686220,
+        "dm_maximo_teorico": 18835915536,
+        "dm_normalizado": 0.14856
+      }
+    ]
+  },
+  "reducao_percentual_dm_por_k": [
+    {
+      "k": 2,
+      "reducao_percentual_dm": 93.272
+    },
+    {
+      "k": 3,
+      "reducao_percentual_dm": 90.2337
+    },
+    {
+      "k": 4,
+      "reducao_percentual_dm": 87.5514
+    },
+    {
+      "k": 5,
+      "reducao_percentual_dm": 85.1317
+    }
+  ]
+}

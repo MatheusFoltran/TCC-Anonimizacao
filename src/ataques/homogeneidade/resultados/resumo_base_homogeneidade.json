@@ -1,0 +1,163 @@
+{
+  "arquivo_entrada": "src/modelos/k_anonimato/resultados/candidatos.csv",
+  "total_registros_entrada": 137244,
+  "por_atributo_sensivel": [
+    {
+      "atributo_sensivel": "EVOLUCAO",
+      "total_registros_homogeneos": 16960,
+      "total_grupos_homogeneos": 10032,
+      "percentual_registros_vulneraveis": 12.3576,
+      "distribuicao_valor_sensivel_unico": {
+        "1": 13947,
+        "2": 2632,
+        "3": 255,
+        "9": 126
+      },
+      "breakdown_vulnerabilidade": {
+        "grupos_tamanho_1": {
+          "registros": 7546,
+          "grupos": 7546,
+          "descricao": "Registros unicos — trivialmente identificaveis sem necessidade de ataque de homogeneidade"
+        },
+        "por_k": [
+          {
+            "k": 2,
+            "grupos_abaixo_k": {
+              "registros": 0,
+              "grupos": 0,
+              "descricao": "Grupos com tamanho entre 2 e k-1 — nao satisfazem k=2, suprimidos em sistemas reais"
+            },
+            "grupos_satisfazem_k": {
+              "registros": 9414,
+              "grupos": 2486,
+              "descricao": "Grupos com tamanho >= k=2 — satisfazem k-anonimato e ainda tem EVOLUCAO homogenea (vulnerabilidade real do modelo)"
+            }
+          },
+          {
+            "k": 3,
+            "grupos_abaixo_k": {
+              "registros": 2590,
+              "grupos": 1295,
+              "descricao": "Grupos com tamanho entre 2 e k-1 — nao satisfazem k=3, suprimidos em sistemas reais"
+            },
+            "grupos_satisfazem_k": {
+              "registros": 6824,
+              "grupos": 1191,
+              "descricao": "Grupos com tamanho >= k=3 — satisfazem k-anonimato e ainda tem EVOLUCAO homogenea (vulnerabilidade real do modelo)"
+            }
+          },
+          {
+            "k": 4,
+            "grupos_abaixo_k": {
+              "registros": 4111,
+              "grupos": 1802,
+              "descricao": "Grupos com tamanho entre 2 e k-1 — nao satisfazem k=4, suprimidos em sistemas reais"
+            },
+            "grupos_satisfazem_k": {
+              "registros": 5303,
+              "grupos": 684,
+              "descricao": "Grupos com tamanho >= k=4 — satisfazem k-anonimato e ainda tem EVOLUCAO homogenea (vulnerabilidade real do modelo)"
+            }
+          },
+          {
+            "k": 5,
+            "grupos_abaixo_k": {
+              "registros": 5091,
+              "grupos": 2047,
+              "descricao": "Grupos com tamanho entre 2 e k-1 — nao satisfazem k=5, suprimidos em sistemas reais"
+            },
+            "grupos_satisfazem_k": {
+              "registros": 4323,
+              "grupos": 439,
+              "descricao": "Grupos com tamanho >= k=5 — satisfazem k-anonimato e ainda tem EVOLUCAO homogenea (vulnerabilidade real do modelo)"
+            }
+          }
+        ]
+      },
+      "distribuicao_confianca_grupos_homogeneos": {
+        "baixa": 2397,
+        "media": 47,
+        "alta": 42
+      }
+    },
+    {
+      "atributo_sensivel": "CLASSI_FIN",
+      "total_registros_homogeneos": 20643,
+      "total_grupos_homogeneos": 11424,
+      "percentual_registros_vulneraveis": 15.0411,
+      "distribuicao_valor_sensivel_unico": {
+        "5": 17393,
+        "4": 2917,
+        "2": 283,
+        "1": 35,
+        "3": 15
+      },
+      "breakdown_vulnerabilidade": {
+        "grupos_tamanho_1": {
+          "registros": 8119,
+          "grupos": 8119,
+          "descricao": "Registros unicos — trivialmente identificaveis sem necessidade de ataque de homogeneidade"
+        },
+        "por_k": [
+          {
+            "k": 2,
+            "grupos_abaixo_k": {
+              "registros": 0,
+              "grupos": 0,
+              "descricao": "Grupos com tamanho entre 2 e k-1 — nao satisfazem k=2, suprimidos em sistemas reais"
+            },
+            "grupos_satisfazem_k": {
+              "registros": 12524,
+              "grupos": 3305,
+              "descricao": "Grupos com tamanho >= k=2 — satisfazem k-anonimato e ainda tem CLASSI_FIN homogenea (vulnerabilidade real do modelo)"
+            }
+          },
+          {
+            "k": 3,
+            "grupos_abaixo_k": {
+              "registros": 3240,
+              "grupos": 1620,
+              "descricao": "Grupos com tamanho entre 2 e k-1 — nao satisfazem k=3, suprimidos em sistemas reais"
+            },
+            "grupos_satisfazem_k": {
+              "registros": 9284,
+              "grupos": 1685,
+              "descricao": "Grupos com tamanho >= k=3 — satisfazem k-anonimato e ainda tem CLASSI_FIN homogenea (vulnerabilidade real do modelo)"
+            }
+          },
+          {
+            "k": 4,
+            "grupos_abaixo_k": {
+              "registros": 5190,
+              "grupos": 2270,
+              "descricao": "Grupos com tamanho entre 2 e k-1 — nao satisfazem k=4, suprimidos em sistemas reais"
+            },
+            "grupos_satisfazem_k": {
+              "registros": 7334,
+              "grupos": 1035,
+              "descricao": "Grupos com tamanho >= k=4 — satisfazem k-anonimato e ainda tem CLASSI_FIN homogenea (vulnerabilidade real do modelo)"
+            }
+          },
+          {
+            "k": 5,
+            "grupos_abaixo_k": {
+              "registros": 6466,
+              "grupos": 2589,
+              "descricao": "Grupos com tamanho entre 2 e k-1 — nao satisfazem k=5, suprimidos em sistemas reais"
+            },
+            "grupos_satisfazem_k": {
+              "registros": 6058,
+              "grupos": 716,
+              "descricao": "Grupos com tamanho >= k=5 — satisfazem k-anonimato e ainda tem CLASSI_FIN homogenea (vulnerabilidade real do modelo)"
+            }
+          }
+        ]
+      },
+      "distribuicao_confianca_grupos_homogeneos": {
+        "baixa": 3183,
+        "media": 73,
+        "alta": 49
+      }
+    }
+  ]
+}

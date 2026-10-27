@@ -1,0 +1,397 @@
+{
+  "descricao": "Para cada nivel de protecao k (k_max_satisfeito = maior k que o bloco QI puro satisfaz), mostra a EMD media/mediana do bloco e o percentual de blocos/registros que violam a t-proximidade em cada limiar de t avaliado. k_max=1 representa blocos de tamanho 1 (fora do escopo pratico da t-proximidade, mas incluidos para completude). Blocos com k_max alto ainda violando a t-proximidade em limiares permissivos confirmam que k-anonimato (tamanho de bloco) e t-proximidade (distancia à distribuicao global) sao dimensoes independentes.",
+  "por_atributo_sensivel": [
+    {
+      "atributo_sensivel": "EVOLUCAO",
+      "total_registros_avaliados": 124960,
+      "por_k_max": [
+        {
+          "k_max_satisfeito": 1,
+          "label": "k=1",
+          "grupos_total": 7897,
+          "registros_total": 7897,
+          "emd_media": 0.4495,
+          "emd_mediana": 0.2934,
+          "por_t": [
+            {
+              "t": 0.1,
+              "grupos_viola_t": 7897,
+              "percentual_grupos_viola_t": 100.0,
+              "registros_viola_t": 7897,
+              "percentual_registros_viola_t": 100.0
+            },
+            {
+              "t": 0.15,
+              "grupos_viola_t": 7897,
+              "percentual_grupos_viola_t": 100.0,
+              "registros_viola_t": 7897,
+              "percentual_registros_viola_t": 100.0
+            },
+            {
+              "t": 0.2,
+              "grupos_viola_t": 7897,
+              "percentual_grupos_viola_t": 100.0,
+              "registros_viola_t": 7897,
+              "percentual_registros_viola_t": 100.0
+            },
+            {
+              "t": 0.3,
+              "grupos_viola_t": 2507,
+              "percentual_grupos_viola_t": 31.7462,
+              "registros_viola_t": 2507,
+              "percentual_registros_viola_t": 31.7462
+            }
+          ]
+        },
+        {
+          "k_max_satisfeito": 2,
+          "label": "k_max=2",
+          "grupos_total": 2337,
+          "registros_total": 4674,
+          "emd_media": 0.3553,
+          "emd_mediana": 0.2934,
+          "por_t": [
+            {
+              "t": 0.1,
+              "grupos_viola_t": 2337,
+              "percentual_grupos_viola_t": 100.0,
+              "registros_viola_t": 4674,
+              "percentual_registros_viola_t": 100.0
+            },
+            {
+              "t": 0.15,
+              "grupos_viola_t": 2337,
+              "percentual_grupos_viola_t": 100.0,
+              "registros_viola_t": 4674,
+              "percentual_registros_viola_t": 100.0
+            },
+            {
+              "t": 0.2,
+              "grupos_viola_t": 2337,
+              "percentual_grupos_viola_t": 100.0,
+              "registros_viola_t": 4674,
+              "percentual_registros_viola_t": 100.0
+            },
+            {
+              "t": 0.3,
+              "grupos_viola_t": 475,
+              "percentual_grupos_viola_t": 20.3252,
+              "registros_viola_t": 950,
+              "percentual_registros_viola_t": 20.3252
+            }
+          ]
+        },
+        {
+          "k_max_satisfeito": 3,
+          "label": "k_max=3",
+          "grupos_total": 1247,
+          "registros_total": 3741,
+          "emd_media": 0.2957,
+          "emd_mediana": 0.2934,
+          "por_t": [
+            {
+              "t": 0.1,
+              "grupos_viola_t": 926,
+              "percentual_grupos_viola_t": 74.2582,
+              "registros_viola_t": 2778,
+              "percentual_registros_viola_t": 74.2582
+            },
+            {
+              "t": 0.15,
+              "grupos_viola_t": 926,
+              "percentual_grupos_viola_t": 74.2582,
+              "registros_viola_t": 2778,
+              "percentual_registros_viola_t": 74.2582
+            },
+            {
+              "t": 0.2,
+              "grupos_viola_t": 926,
+              "percentual_grupos_viola_t": 74.2582,
+              "registros_viola_t": 2778,
+              "percentual_registros_viola_t": 74.2582
+            },
+            {
+              "t": 0.3,
+              "grupos_viola_t": 401,
+              "percentual_grupos_viola_t": 32.1572,
+              "registros_viola_t": 1203,
+              "percentual_registros_viola_t": 32.1572
+            }
+          ]
+        },
+        {
+          "k_max_satisfeito": 4,
+          "label": "k_max=4",
+          "grupos_total": 801,
+          "registros_total": 3204,
+          "emd_media": 0.2584,
+          "emd_mediana": 0.279,
+          "por_t": [
+            {
+              "t": 0.1,
+              "grupos_viola_t": 596,
+              "percentual_grupos_viola_t": 74.407,
+              "registros_viola_t": 2384,
+              "percentual_registros_viola_t": 74.407
+            },
+            {
+              "t": 0.15,
+              "grupos_viola_t": 596,
+              "percentual_grupos_viola_t": 74.407,
+              "registros_viola_t": 2384,
+              "percentual_registros_viola_t": 74.407
+            },
+            {
+              "t": 0.2,
+              "grupos_viola_t": 596,
+              "percentual_grupos_viola_t": 74.407,
+              "registros_viola_t": 2384,
+              "percentual_registros_viola_t": 74.407
+            },
+            {
+              "t": 0.3,
+              "grupos_viola_t": 126,
+              "percentual_grupos_viola_t": 15.7303,
+              "registros_viola_t": 504,
+              "percentual_registros_viola_t": 15.7303
+            }
+          ]
+        },
+        {
+          "k_max_satisfeito": 5,
+          "label": "k_max=5",
+          "grupos_total": 4453,
+          "registros_total": 105444,
+          "emd_media": 0.1971,
+          "emd_mediana": 0.1736,
+          "por_t": [
+            {
+              "t": 0.1,
+              "grupos_viola_t": 3384,
+              "percentual_grupos_viola_t": 75.9937,
+              "registros_viola_t": 70431,
+              "percentual_registros_viola_t": 66.7947
+            },
+            {
+              "t": 0.15,
+              "grupos_viola_t": 2724,
+              "percentual_grupos_viola_t": 61.1722,
+              "registros_viola_t": 49181,
+              "percentual_registros_viola_t": 46.6418
+            },
+            {
+              "t": 0.2,
+              "grupos_viola_t": 1930,
+              "percentual_grupos_viola_t": 43.3416,
+              "registros_viola_t": 31164,
+              "percentual_registros_viola_t": 29.555
+            },
+            {
+              "t": 0.3,
+              "grupos_viola_t": 489,
+              "percentual_grupos_viola_t": 10.9814,
+              "registros_viola_t": 4755,
+              "percentual_registros_viola_t": 4.5095
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "atributo_sensivel": "CLASSI_FIN",
+      "total_registros_avaliados": 136940,
+      "por_k_max": [
+        {
+          "k_max_satisfeito": 1,
+          "label": "k=1",
+          "grupos_total": 8131,
+          "registros_total": 8131,
+          "emd_media": 0.4211,
+          "emd_mediana": 0.2882,
+          "por_t": [
+            {
+              "t": 0.1,
+              "grupos_viola_t": 8131,
+              "percentual_grupos_viola_t": 100.0,
+              "registros_viola_t": 8131,
+              "percentual_registros_viola_t": 100.0
+            },
+            {
+              "t": 0.15,
+              "grupos_viola_t": 8131,
+              "percentual_grupos_viola_t": 100.0,
+              "registros_viola_t": 8131,
+              "percentual_registros_viola_t": 100.0
+            },
+            {
+              "t": 0.2,
+              "grupos_viola_t": 8131,
+              "percentual_grupos_viola_t": 100.0,
+              "registros_viola_t": 8131,
+              "percentual_registros_viola_t": 100.0
+            },
+            {
+              "t": 0.3,
+              "grupos_viola_t": 2222,
+              "percentual_grupos_viola_t": 27.3275,
+              "registros_viola_t": 2222,
+              "percentual_registros_viola_t": 27.3275
+            }
+          ]
+        },
+        {
+          "k_max_satisfeito": 2,
+          "label": "k_max=2",
+          "grupos_total": 2467,
+          "registros_total": 4934,
+          "emd_media": 0.3498,
+          "emd_mediana": 0.2882,
+          "por_t": [
+            {
+              "t": 0.1,
+              "grupos_viola_t": 2467,
+              "percentual_grupos_viola_t": 100.0,
+              "registros_viola_t": 4934,
+              "percentual_registros_viola_t": 100.0
+            },
+            {
+              "t": 0.15,
+              "grupos_viola_t": 2467,
+              "percentual_grupos_viola_t": 100.0,
+              "registros_viola_t": 4934,
+              "percentual_registros_viola_t": 100.0
+            },
+            {
+              "t": 0.2,
+              "grupos_viola_t": 2467,
+              "percentual_grupos_viola_t": 100.0,
+              "registros_viola_t": 4934,
+              "percentual_registros_viola_t": 100.0
+            },
+            {
+              "t": 0.3,
+              "grupos_viola_t": 435,
+              "percentual_grupos_viola_t": 17.6328,
+              "registros_viola_t": 870,
+              "percentual_registros_viola_t": 17.6328
+            }
+          ]
+        },
+        {
+          "k_max_satisfeito": 3,
+          "label": "k_max=3",
+          "grupos_total": 1279,
+          "registros_total": 3837,
+          "emd_media": 0.2863,
+          "emd_mediana": 0.2882,
+          "por_t": [
+            {
+              "t": 0.1,
+              "grupos_viola_t": 912,
+              "percentual_grupos_viola_t": 71.3057,
+              "registros_viola_t": 2736,
+              "percentual_registros_viola_t": 71.3057
+            },
+            {
+              "t": 0.15,
+              "grupos_viola_t": 912,
+              "percentual_grupos_viola_t": 71.3057,
+              "registros_viola_t": 2736,
+              "percentual_registros_viola_t": 71.3057
+            },
+            {
+              "t": 0.2,
+              "grupos_viola_t": 912,
+              "percentual_grupos_viola_t": 71.3057,
+              "registros_viola_t": 2736,
+              "percentual_registros_viola_t": 71.3057
+            },
+            {
+              "t": 0.3,
+              "grupos_viola_t": 337,
+              "percentual_grupos_viola_t": 26.3487,
+              "registros_viola_t": 1011,
+              "percentual_registros_viola_t": 26.3487
+            }
+          ]
+        },
+        {
+          "k_max_satisfeito": 4,
+          "label": "k_max=4",
+          "grupos_total": 845,
+          "registros_total": 3380,
+          "emd_media": 0.2628,
+          "emd_mediana": 0.2882,
+          "por_t": [
+            {
+              "t": 0.1,
+              "grupos_viola_t": 611,
+              "percentual_grupos_viola_t": 72.3077,
+              "registros_viola_t": 2444,
+              "percentual_registros_viola_t": 72.3077
+            },
+            {
+              "t": 0.15,
+              "grupos_viola_t": 611,
+              "percentual_grupos_viola_t": 72.3077,
+              "registros_viola_t": 2444,
+              "percentual_registros_viola_t": 72.3077
+            },
+            {
+              "t": 0.2,
+              "grupos_viola_t": 611,
+              "percentual_grupos_viola_t": 72.3077,
+              "registros_viola_t": 2444,
+              "percentual_registros_viola_t": 72.3077
+            },
+            {
+              "t": 0.3,
+              "grupos_viola_t": 148,
+              "percentual_grupos_viola_t": 17.5148,
+              "registros_viola_t": 592,
+              "percentual_registros_viola_t": 17.5148
+            }
+          ]
+        },
+        {
+          "k_max_satisfeito": 5,
+          "label": "k_max=5",
+          "grupos_total": 4685,
+          "registros_total": 116658,
+          "emd_media": 0.2108,
+          "emd_mediana": 0.1732,
+          "por_t": [
+            {
+              "t": 0.1,
+              "grupos_viola_t": 3533,
+              "percentual_grupos_viola_t": 75.4109,
+              "registros_viola_t": 80407,
+              "percentual_registros_viola_t": 68.9254
+            },
+            {
+              "t": 0.15,
+              "grupos_viola_t": 2644,
+              "percentual_grupos_viola_t": 56.4354,
+              "registros_viola_t": 55525,
+              "percentual_registros_viola_t": 47.5964
+            },
+            {
+              "t": 0.2,
+              "grupos_viola_t": 1951,
+              "percentual_grupos_viola_t": 41.6435,
+              "registros_viola_t": 32445,
+              "percentual_registros_viola_t": 27.8121
+            },
+            {
+              "t": 0.3,
+              "grupos_viola_t": 665,
+              "percentual_grupos_viola_t": 14.1942,
+              "registros_viola_t": 12049,
+              "percentual_registros_viola_t": 10.3285
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "arquivo_entrada": "src/modelos/k_anonimato/resultados/candidatos.csv",
+  "descricao": "DM (Bayardo & Agrawal, 2005) generalizado: mesmo bloco QI puro e penalidade do DM_k (src/metricas/dm/dm_k.py), trocando o criterio de conformidade para distintos/entropia do bloco QI+outro-atributo-sensivel (Def. 4.6, l-diversidade) do registro. |D| e o total AVALIADO por atributo sensivel (exclui nulos), nao o total da base inteira.",
+  "por_atributo_sensivel": [
+    {
+      "atributo_sensivel": "EVOLUCAO",
+      "total_registros_avaliados": 124960,
+      "total_registros_nulos_excluidos": 12284,
+      "por_l": [
+        {
+          "l": 2,
+          "limiar_log_l": 0.693147,
+          "distinta": {
+            "dm": 3528737313,
+            "dm_maximo_teorico": 15615001600,
+            "dm_normalizado": 0.225984
+          },
+          "entropia": {
+            "dm": 12160099042,
+            "dm_maximo_teorico": 15615001600,
+            "dm_normalizado": 0.778745
+          }
+        },
+        {
+          "l": 3,
+          "limiar_log_l": 1.098612,
+          "distinta": {
+            "dm": 11107585024,
+            "dm_maximo_teorico": 15615001600,
+            "dm_normalizado": 0.711341
+          },
+          "entropia": {
+            "dm": 15578028459,
+            "dm_maximo_teorico": 15615001600,
+            "dm_normalizado": 0.997632
+          }
+        },
+        {
+          "l": 4,
+          "limiar_log_l": 1.386294,
+          "distinta": {
+            "dm": 15108275278,
+            "dm_maximo_teorico": 15615001600,
+            "dm_normalizado": 0.967549
+          },
+          "entropia": {
+            "dm": 15613002652,
+            "dm_maximo_teorico": 15615001600,
+            "dm_normalizado": 0.999872
+          }
+        },
+        {
+          "l": 5,
+          "limiar_log_l": 1.609438,
+          "distinta": {
+            "dm": 15615001600,
+            "dm_maximo_teorico": 15615001600,
+            "dm_normalizado": 1.0
+          },
+          "entropia": {
+            "dm": 15615001600,
+            "dm_maximo_teorico": 15615001600,
+            "dm_normalizado": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "atributo_sensivel": "CLASSI_FIN",
+      "total_registros_avaliados": 136940,
+      "total_registros_nulos_excluidos": 304,
+      "por_l": [
+        {
+          "l": 2,
+          "limiar_log_l": 0.693147,
+          "distinta": {
+            "dm": 5191930865,
+            "dm_maximo_teorico": 18752563600,
+            "dm_normalizado": 0.276865
+          },
+          "entropia": {
+            "dm": 15832602709,
+            "dm_maximo_teorico": 18752563600,
+            "dm_normalizado": 0.84429
+          }
+        },
+        {
+          "l": 3,
+          "limiar_log_l": 1.098612,
+          "distinta": {
+            "dm": 13291918587,
+            "dm_maximo_teorico": 18752563600,
+            "dm_normalizado": 0.708805
+          },
+          "entropia": {
+            "dm": 18739555698,
+            "dm_maximo_teorico": 18752563600,
+            "dm_normalizado": 0.999306
+          }
+        },
+        {
+          "l": 4,
+          "limiar_log_l": 1.386294,
+          "distinta": {
+            "dm": 17718112793,
+            "dm_maximo_teorico": 18752563600,
+            "dm_normalizado": 0.944837
+          },
+          "entropia": {
+            "dm": 18752563600,
+            "dm_maximo_teorico": 18752563600,
+            "dm_normalizado": 1.0
+          }
+        },
+        {
+          "l": 5,
+          "limiar_log_l": 1.609438,
+          "distinta": {
+            "dm": 18688975076,
+            "dm_maximo_teorico": 18752563600,
+            "dm_normalizado": 0.996609
+          },
+          "entropia": {
+            "dm": 18752563600,
+            "dm_maximo_teorico": 18752563600,
+            "dm_normalizado": 1.0
+          }
+        }
+      ]
+    }
+  ]
+}

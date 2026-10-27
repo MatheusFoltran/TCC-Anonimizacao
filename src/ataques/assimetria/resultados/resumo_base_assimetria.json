@@ -1,0 +1,79 @@
+{
+  "arquivo_entrada": "src/modelos/k_anonimato/resultados/candidatos.csv",
+  "total_registros_entrada": 137244,
+  "l_minimo": 2,
+  "razoes_avaliadas": [
+    2.0,
+    5.0,
+    10.0
+  ],
+  "por_atributo_sensivel": [
+    {
+      "atributo_sensivel": "EVOLUCAO",
+      "total_registros_entrada": 137244,
+      "total_blocos_l_diversos": 6999,
+      "total_linhas_bloco_valor": 15269,
+      "distribuicao_distintos": {
+        "2": 5839,
+        "3": 1049,
+        "4": 111
+      },
+      "razao_risco_media": 2.6659,
+      "razao_risco_mediana": 1.0971,
+      "razao_risco_p90": 6.5751,
+      "razao_risco_max": 46.3846,
+      "total_registros_avaliados": 96798,
+      "por_razao": [
+        {
+          "razao_minima": 2.0,
+          "registros_risco_elevado": 13172,
+          "percentual_registros_risco_elevado": 13.6077
+        },
+        {
+          "razao_minima": 5.0,
+          "registros_risco_elevado": 3435,
+          "percentual_registros_risco_elevado": 3.5486
+        },
+        {
+          "razao_minima": 10.0,
+          "registros_risco_elevado": 1831,
+          "percentual_registros_risco_elevado": 1.8916
+        }
+      ]
+    },
+    {
+      "atributo_sensivel": "CLASSI_FIN",
+      "total_registros_entrada": 137244,
+      "total_blocos_l_diversos": 6769,
+      "total_linhas_bloco_valor": 14760,
+      "distribuicao_distintos": {
+        "2": 5648,
+        "3": 1024,
+        "4": 93,
+        "5": 4
+      },
+      "razao_risco_media": 3.4871,
+      "razao_risco_mediana": 1.0926,
+      "razao_risco_p90": 3.1324,
+      "razao_risco_max": 340.6468,
+      "total_registros_avaliados": 99108,
+      "por_razao": [
+        {
+          "razao_minima": 2.0,
+          "registros_risco_elevado": 13031,
+          "percentual_registros_risco_elevado": 13.1483
+        },
+        {
+          "razao_minima": 5.0,
+          "registros_risco_elevado": 2933,
+          "percentual_registros_risco_elevado": 2.9594
+        },
+        {
+          "razao_minima": 10.0,
+          "registros_risco_elevado": 2237,
+          "percentual_registros_risco_elevado": 2.2571
+        }
+      ]
+    }
+  ]
+}

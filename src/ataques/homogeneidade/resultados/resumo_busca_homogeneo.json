@@ -1,0 +1,308 @@
+{
+  "cenario": 1,
+  "nome_cenario": "homogeneo",
+  "descricao": "Alvos nas maiores classes homogeneas do dataset, para cada atributo sensivel.",
+  "descricao_breakdown_nao_atinge_k": "Ataques bem-sucedidos contra grupos que satisfazem k demonstram vulnerabilidade real do k-anonimato ao ataque de homogeneidade.",
+  "por_atributo_sensivel": [
+    {
+      "atributo_sensivel": "EVOLUCAO",
+      "total_alvos": 10,
+      "ataques_encontrados": 10,
+      "taxa_sucesso": 100.0,
+      "breakdown_nao_atinge_k": [
+        {
+          "k": 2,
+          "contra_grupos_que_satisfazem_k": 10,
+          "contra_grupos_abaixo_k": 0
+        },
+        {
+          "k": 3,
+          "contra_grupos_que_satisfazem_k": 6,
+          "contra_grupos_abaixo_k": 4
+        },
+        {
+          "k": 4,
+          "contra_grupos_que_satisfazem_k": 4,
+          "contra_grupos_abaixo_k": 6
+        },
+        {
+          "k": 5,
+          "contra_grupos_que_satisfazem_k": 3,
+          "contra_grupos_abaixo_k": 7
+        }
+      ],
+      "alvos_confirmados": [
+        {
+          "alvo_id": "1",
+          "nome": "Alvo Homogeneo 1",
+          "valor_sensivel": "1",
+          "tamanho_grupo_qi": "2",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "True",
+          "nao_atinge_k4": "True",
+          "nao_atinge_k5": "True",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "2",
+          "nome": "Alvo Homogeneo 2",
+          "valor_sensivel": "1",
+          "tamanho_grupo_qi": "6",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "False",
+          "nao_atinge_k4": "False",
+          "nao_atinge_k5": "False",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "3",
+          "nome": "Alvo Homogeneo 3",
+          "valor_sensivel": "1",
+          "tamanho_grupo_qi": "7",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "False",
+          "nao_atinge_k4": "False",
+          "nao_atinge_k5": "False",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "4",
+          "nome": "Alvo Homogeneo 4",
+          "valor_sensivel": "1",
+          "tamanho_grupo_qi": "2",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "True",
+          "nao_atinge_k4": "True",
+          "nao_atinge_k5": "True",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "5",
+          "nome": "Alvo Homogeneo 5",
+          "valor_sensivel": "1",
+          "tamanho_grupo_qi": "2",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "True",
+          "nao_atinge_k4": "True",
+          "nao_atinge_k5": "True",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "6",
+          "nome": "Alvo Homogeneo 6",
+          "valor_sensivel": "1",
+          "tamanho_grupo_qi": "4",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "False",
+          "nao_atinge_k4": "False",
+          "nao_atinge_k5": "True",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "7",
+          "nome": "Alvo Homogeneo 7",
+          "valor_sensivel": "1",
+          "tamanho_grupo_qi": "3",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "False",
+          "nao_atinge_k4": "True",
+          "nao_atinge_k5": "True",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "8",
+          "nome": "Alvo Homogeneo 8",
+          "valor_sensivel": "1",
+          "tamanho_grupo_qi": "3",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "False",
+          "nao_atinge_k4": "True",
+          "nao_atinge_k5": "True",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "9",
+          "nome": "Alvo Homogeneo 9",
+          "valor_sensivel": "1",
+          "tamanho_grupo_qi": "2",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "True",
+          "nao_atinge_k4": "True",
+          "nao_atinge_k5": "True",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "10",
+          "nome": "Alvo Homogeneo 10",
+          "valor_sensivel": "1",
+          "tamanho_grupo_qi": "9",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "False",
+          "nao_atinge_k4": "False",
+          "nao_atinge_k5": "False",
+          "confianca_mesma_pessoa": "baixa"
+        }
+      ]
+    },
+    {
+      "atributo_sensivel": "CLASSI_FIN",
+      "total_alvos": 10,
+      "ataques_encontrados": 10,
+      "taxa_sucesso": 100.0,
+      "breakdown_nao_atinge_k": [
+        {
+          "k": 2,
+          "contra_grupos_que_satisfazem_k": 10,
+          "contra_grupos_abaixo_k": 0
+        },
+        {
+          "k": 3,
+          "contra_grupos_que_satisfazem_k": 5,
+          "contra_grupos_abaixo_k": 5
+        },
+        {
+          "k": 4,
+          "contra_grupos_que_satisfazem_k": 3,
+          "contra_grupos_abaixo_k": 7
+        },
+        {
+          "k": 5,
+          "contra_grupos_que_satisfazem_k": 1,
+          "contra_grupos_abaixo_k": 9
+        }
+      ],
+      "alvos_confirmados": [
+        {
+          "alvo_id": "1",
+          "nome": "Alvo Homogeneo 1",
+          "valor_sensivel": "5",
+          "tamanho_grupo_qi": "3",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "False",
+          "nao_atinge_k4": "True",
+          "nao_atinge_k5": "True",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "2",
+          "nome": "Alvo Homogeneo 2",
+          "valor_sensivel": "5",
+          "tamanho_grupo_qi": "5",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "False",
+          "nao_atinge_k4": "False",
+          "nao_atinge_k5": "False",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "3",
+          "nome": "Alvo Homogeneo 3",
+          "valor_sensivel": "5",
+          "tamanho_grupo_qi": "2",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "True",
+          "nao_atinge_k4": "True",
+          "nao_atinge_k5": "True",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "4",
+          "nome": "Alvo Homogeneo 4",
+          "valor_sensivel": "5",
+          "tamanho_grupo_qi": "4",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "False",
+          "nao_atinge_k4": "False",
+          "nao_atinge_k5": "True",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "5",
+          "nome": "Alvo Homogeneo 5",
+          "valor_sensivel": "5",
+          "tamanho_grupo_qi": "2",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "True",
+          "nao_atinge_k4": "True",
+          "nao_atinge_k5": "True",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "6",
+          "nome": "Alvo Homogeneo 6",
+          "valor_sensivel": "5",
+          "tamanho_grupo_qi": "4",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "False",
+          "nao_atinge_k4": "False",
+          "nao_atinge_k5": "True",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "7",
+          "nome": "Alvo Homogeneo 7",
+          "valor_sensivel": "5",
+          "tamanho_grupo_qi": "2",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "True",
+          "nao_atinge_k4": "True",
+          "nao_atinge_k5": "True",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "8",
+          "nome": "Alvo Homogeneo 8",
+          "valor_sensivel": "5",
+          "tamanho_grupo_qi": "2",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "True",
+          "nao_atinge_k4": "True",
+          "nao_atinge_k5": "True",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "9",
+          "nome": "Alvo Homogeneo 9",
+          "valor_sensivel": "5",
+          "tamanho_grupo_qi": "3",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "False",
+          "nao_atinge_k4": "True",
+          "nao_atinge_k5": "True",
+          "confianca_mesma_pessoa": "baixa"
+        },
+        {
+          "alvo_id": "10",
+          "nome": "Alvo Homogeneo 10",
+          "valor_sensivel": "5",
+          "tamanho_grupo_qi": "2",
+          "ataque_bem_sucedido": true,
+          "nao_atinge_k2": "False",
+          "nao_atinge_k3": "True",
+          "nao_atinge_k4": "True",
+          "nao_atinge_k5": "True",
+          "confianca_mesma_pessoa": "baixa"
+        }
+      ]
+    }
+  ]
+}

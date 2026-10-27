@@ -1,0 +1,358 @@
+{
+  "criterio_sucesso": "razao_risco (p_local / p_global do valor real do alvo) >= razao_minima, varrido em RAZOES_RISCO",
+  "razoes_avaliadas": [
+    2.0,
+    5.0,
+    10.0
+  ],
+  "por_atributo_sensivel": [
+    {
+      "atributo_sensivel": "EVOLUCAO",
+      "total_alvos": 10,
+      "razao_risco_media": 5.3489,
+      "por_razao": [
+        {
+          "razao_minima": 2.0,
+          "ataques_bem_sucedidos": 4,
+          "taxa_sucesso": 40.0
+        },
+        {
+          "razao_minima": 5.0,
+          "ataques_bem_sucedidos": 3,
+          "taxa_sucesso": 30.0
+        },
+        {
+          "razao_minima": 10.0,
+          "ataques_bem_sucedidos": 3,
+          "taxa_sucesso": 30.0
+        }
+      ],
+      "alvos": [
+        {
+          "alvo_id": "1",
+          "nome": "Alvo Assimetria 1",
+          "atributo_conhecido": "CLASSI_FIN",
+          "atributo_conhecido_valor": "5",
+          "valor_sensivel_real": "2",
+          "tamanho_bloco": 31,
+          "distintos": 2,
+          "p_local": 0.5161290323,
+          "p_global": 0.2485995519,
+          "razao_risco": 2.0761462698,
+          "ataque_bem_sucedido_2x": true,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        },
+        {
+          "alvo_id": "2",
+          "nome": "Alvo Assimetria 2",
+          "atributo_conhecido": "CLASSI_FIN",
+          "atributo_conhecido_valor": "4",
+          "valor_sensivel_real": "3",
+          "tamanho_bloco": 2,
+          "distintos": 2,
+          "p_local": 0.5,
+          "p_global": 0.0304177337,
+          "razao_risco": 16.4377795317,
+          "ataque_bem_sucedido_2x": true,
+          "ataque_bem_sucedido_5x": true,
+          "ataque_bem_sucedido_10x": true
+        },
+        {
+          "alvo_id": "3",
+          "nome": "Alvo Assimetria 3",
+          "atributo_conhecido": "CLASSI_FIN",
+          "atributo_conhecido_valor": "5",
+          "valor_sensivel_real": "2",
+          "tamanho_bloco": 30,
+          "distintos": 2,
+          "p_local": 0.4,
+          "p_global": 0.2485995519,
+          "razao_risco": 1.6090133591,
+          "ataque_bem_sucedido_2x": false,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        },
+        {
+          "alvo_id": "4",
+          "nome": "Alvo Assimetria 4",
+          "atributo_conhecido": "CLASSI_FIN",
+          "atributo_conhecido_valor": "5",
+          "valor_sensivel_real": "2",
+          "tamanho_bloco": 5,
+          "distintos": 3,
+          "p_local": 0.4,
+          "p_global": 0.2485995519,
+          "razao_risco": 1.6090133591,
+          "ataque_bem_sucedido_2x": false,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        },
+        {
+          "alvo_id": "5",
+          "nome": "Alvo Assimetria 5",
+          "atributo_conhecido": "CLASSI_FIN",
+          "atributo_conhecido_valor": "5",
+          "valor_sensivel_real": "1",
+          "tamanho_bloco": 5,
+          "distintos": 2,
+          "p_local": 0.8,
+          "p_global": 0.7066101152,
+          "razao_risco": 1.132166074,
+          "ataque_bem_sucedido_2x": false,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        },
+        {
+          "alvo_id": "6",
+          "nome": "Alvo Assimetria 6",
+          "atributo_conhecido": "CLASSI_FIN",
+          "atributo_conhecido_valor": "4",
+          "valor_sensivel_real": "3",
+          "tamanho_bloco": 2,
+          "distintos": 2,
+          "p_local": 0.5,
+          "p_global": 0.0304177337,
+          "razao_risco": 16.4377795317,
+          "ataque_bem_sucedido_2x": true,
+          "ataque_bem_sucedido_5x": true,
+          "ataque_bem_sucedido_10x": true
+        },
+        {
+          "alvo_id": "7",
+          "nome": "Alvo Assimetria 7",
+          "atributo_conhecido": "CLASSI_FIN",
+          "atributo_conhecido_valor": "5",
+          "valor_sensivel_real": "1",
+          "tamanho_bloco": 14,
+          "distintos": 2,
+          "p_local": 0.9285714286,
+          "p_global": 0.7066101152,
+          "razao_risco": 1.3141213359,
+          "ataque_bem_sucedido_2x": false,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        },
+        {
+          "alvo_id": "8",
+          "nome": "Alvo Assimetria 8",
+          "atributo_conhecido": "CLASSI_FIN",
+          "atributo_conhecido_valor": "4",
+          "valor_sensivel_real": "3",
+          "tamanho_bloco": 3,
+          "distintos": 2,
+          "p_local": 0.3333333333,
+          "p_global": 0.0304177337,
+          "razao_risco": 10.9585196878,
+          "ataque_bem_sucedido_2x": true,
+          "ataque_bem_sucedido_5x": true,
+          "ataque_bem_sucedido_10x": true
+        },
+        {
+          "alvo_id": "9",
+          "nome": "Alvo Assimetria 9",
+          "atributo_conhecido": "CLASSI_FIN",
+          "atributo_conhecido_valor": "4",
+          "valor_sensivel_real": "1",
+          "tamanho_bloco": 14,
+          "distintos": 2,
+          "p_local": 0.9285714286,
+          "p_global": 0.7066101152,
+          "razao_risco": 1.3141213359,
+          "ataque_bem_sucedido_2x": false,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        },
+        {
+          "alvo_id": "10",
+          "nome": "Alvo Assimetria 10",
+          "atributo_conhecido": "CLASSI_FIN",
+          "atributo_conhecido_valor": "4",
+          "valor_sensivel_real": "2",
+          "tamanho_bloco": 67,
+          "distintos": 3,
+          "p_local": 0.1492537313,
+          "p_global": 0.2485995519,
+          "razao_risco": 0.6003781191,
+          "ataque_bem_sucedido_2x": false,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        }
+      ]
+    },
+    {
+      "atributo_sensivel": "CLASSI_FIN",
+      "total_alvos": 10,
+      "razao_risco_media": 0.7687,
+      "por_razao": [
+        {
+          "razao_minima": 2.0,
+          "ataques_bem_sucedidos": 0,
+          "taxa_sucesso": 0.0
+        },
+        {
+          "razao_minima": 5.0,
+          "ataques_bem_sucedidos": 0,
+          "taxa_sucesso": 0.0
+        },
+        {
+          "razao_minima": 10.0,
+          "ataques_bem_sucedidos": 0,
+          "taxa_sucesso": 0.0
+        }
+      ],
+      "alvos": [
+        {
+          "alvo_id": "1",
+          "nome": "Alvo Assimetria 1",
+          "atributo_conhecido": "EVOLUCAO",
+          "atributo_conhecido_valor": "1",
+          "valor_sensivel_real": "5",
+          "tamanho_bloco": 4,
+          "distintos": 2,
+          "p_local": 0.5,
+          "p_global": 0.711837301,
+          "razao_risco": 0.7024076981,
+          "ataque_bem_sucedido_2x": false,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        },
+        {
+          "alvo_id": "2",
+          "nome": "Alvo Assimetria 2",
+          "atributo_conhecido": "EVOLUCAO",
+          "atributo_conhecido_valor": "1",
+          "valor_sensivel_real": "5",
+          "tamanho_bloco": 4,
+          "distintos": 2,
+          "p_local": 0.25,
+          "p_global": 0.711837301,
+          "razao_risco": 0.351203849,
+          "ataque_bem_sucedido_2x": false,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        },
+        {
+          "alvo_id": "3",
+          "nome": "Alvo Assimetria 3",
+          "atributo_conhecido": "EVOLUCAO",
+          "atributo_conhecido_valor": "1",
+          "valor_sensivel_real": "5",
+          "tamanho_bloco": 7,
+          "distintos": 2,
+          "p_local": 0.2857142857,
+          "p_global": 0.711837301,
+          "razao_risco": 0.4013758275,
+          "ataque_bem_sucedido_2x": false,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        },
+        {
+          "alvo_id": "4",
+          "nome": "Alvo Assimetria 4",
+          "atributo_conhecido": "EVOLUCAO",
+          "atributo_conhecido_valor": "1",
+          "valor_sensivel_real": "5",
+          "tamanho_bloco": 4,
+          "distintos": 2,
+          "p_local": 0.5,
+          "p_global": 0.711837301,
+          "razao_risco": 0.7024076981,
+          "ataque_bem_sucedido_2x": false,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        },
+        {
+          "alvo_id": "5",
+          "nome": "Alvo Assimetria 5",
+          "atributo_conhecido": "EVOLUCAO",
+          "atributo_conhecido_valor": "1",
+          "valor_sensivel_real": "5",
+          "tamanho_bloco": 3,
+          "distintos": 2,
+          "p_local": 0.3333333333,
+          "p_global": 0.711837301,
+          "razao_risco": 0.4682717987,
+          "ataque_bem_sucedido_2x": false,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        },
+        {
+          "alvo_id": "6",
+          "nome": "Alvo Assimetria 6",
+          "atributo_conhecido": "EVOLUCAO",
+          "atributo_conhecido_valor": "1",
+          "valor_sensivel_real": "5",
+          "tamanho_bloco": 15,
+          "distintos": 2,
+          "p_local": 0.9333333333,
+          "p_global": 0.711837301,
+          "razao_risco": 1.3111610364,
+          "ataque_bem_sucedido_2x": false,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        },
+        {
+          "alvo_id": "7",
+          "nome": "Alvo Assimetria 7",
+          "atributo_conhecido": "EVOLUCAO",
+          "atributo_conhecido_valor": "1",
+          "valor_sensivel_real": "5",
+          "tamanho_bloco": 9,
+          "distintos": 2,
+          "p_local": 0.5555555556,
+          "p_global": 0.711837301,
+          "razao_risco": 0.7804529979,
+          "ataque_bem_sucedido_2x": false,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        },
+        {
+          "alvo_id": "8",
+          "nome": "Alvo Assimetria 8",
+          "atributo_conhecido": "EVOLUCAO",
+          "atributo_conhecido_valor": "1",
+          "valor_sensivel_real": "5",
+          "tamanho_bloco": 2,
+          "distintos": 2,
+          "p_local": 0.5,
+          "p_global": 0.711837301,
+          "razao_risco": 0.7024076981,
+          "ataque_bem_sucedido_2x": false,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        },
+        {
+          "alvo_id": "9",
+          "nome": "Alvo Assimetria 9",
+          "atributo_conhecido": "EVOLUCAO",
+          "atributo_conhecido_valor": "2",
+          "valor_sensivel_real": "5",
+          "tamanho_bloco": 19,
+          "distintos": 2,
+          "p_local": 0.9473684211,
+          "p_global": 0.711837301,
+          "razao_risco": 1.3308777437,
+          "ataque_bem_sucedido_2x": false,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        },
+        {
+          "alvo_id": "10",
+          "nome": "Alvo Assimetria 10",
+          "atributo_conhecido": "EVOLUCAO",
+          "atributo_conhecido_valor": "2",
+          "valor_sensivel_real": "5",
+          "tamanho_bloco": 3,
+          "distintos": 2,
+          "p_local": 0.6666666667,
+          "p_global": 0.711837301,
+          "razao_risco": 0.9365435974,
+          "ataque_bem_sucedido_2x": false,
+          "ataque_bem_sucedido_5x": false,
+          "ataque_bem_sucedido_10x": false
+        }
+      ]
+    }
+  ]
+}

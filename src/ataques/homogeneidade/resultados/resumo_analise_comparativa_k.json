@@ -1,0 +1,121 @@
+{
+  "descricao": "Para cada nivel de protecao k (k_max_satisfeito = maior k que o grupo satisfaz), mostra quantos registros e grupos sao vulneraveis ao ataque de homogeneidade (atributo sensivel identico em todos os registros do grupo). k_max=1 representa grupos de tamanho 1 — trivialmente identificaveis sem ataque. Grupos com k_max alto ainda homogeneos provam que k-anonimato nao elimina o risco.",
+  "por_atributo_sensivel": [
+    {
+      "atributo_sensivel": "EVOLUCAO",
+      "total_registros": 137244,
+      "total_registros_homogeneos": 16960,
+      "pct_total_homogeneos": 12.36,
+      "por_nivel_k": [
+        {
+          "k_max_satisfeito": 1,
+          "label": "k=1",
+          "registros_total": 8153,
+          "grupos_total": 8153,
+          "registros_homogeneos": 7546,
+          "grupos_homogeneos": 7546,
+          "pct_registros_hom": 92.55,
+          "pct_grupos_hom": 92.55
+        },
+        {
+          "k_max_satisfeito": 2,
+          "label": "k_max=2",
+          "registros_total": 4936,
+          "grupos_total": 2468,
+          "registros_homogeneos": 2590,
+          "grupos_homogeneos": 1295,
+          "pct_registros_hom": 52.47,
+          "pct_grupos_hom": 52.47
+        },
+        {
+          "k_max_satisfeito": 3,
+          "label": "k_max=3",
+          "registros_total": 3858,
+          "grupos_total": 1286,
+          "registros_homogeneos": 1521,
+          "grupos_homogeneos": 507,
+          "pct_registros_hom": 39.42,
+          "pct_grupos_hom": 39.42
+        },
+        {
+          "k_max_satisfeito": 4,
+          "label": "k_max=4",
+          "registros_total": 3356,
+          "grupos_total": 839,
+          "registros_homogeneos": 980,
+          "grupos_homogeneos": 245,
+          "pct_registros_hom": 29.2,
+          "pct_grupos_hom": 29.2
+        },
+        {
+          "k_max_satisfeito": 5,
+          "label": "k_max=5",
+          "registros_total": 116941,
+          "grupos_total": 4695,
+          "registros_homogeneos": 4323,
+          "grupos_homogeneos": 439,
+          "pct_registros_hom": 3.7,
+          "pct_grupos_hom": 9.35
+        }
+      ]
+    },
+    {
+      "atributo_sensivel": "CLASSI_FIN",
+      "total_registros": 137244,
+      "total_registros_homogeneos": 20643,
+      "pct_total_homogeneos": 15.04,
+      "por_nivel_k": [
+        {
+          "k_max_satisfeito": 1,
+          "label": "k=1",
+          "registros_total": 8153,
+          "grupos_total": 8153,
+          "registros_homogeneos": 8119,
+          "grupos_homogeneos": 8119,
+          "pct_registros_hom": 99.58,
+          "pct_grupos_hom": 99.58
+        },
+        {
+          "k_max_satisfeito": 2,
+          "label": "k_max=2",
+          "registros_total": 4936,
+          "grupos_total": 2468,
+          "registros_homogeneos": 3240,
+          "grupos_homogeneos": 1620,
+          "pct_registros_hom": 65.64,
+          "pct_grupos_hom": 65.64
+        },
+        {
+          "k_max_satisfeito": 3,
+          "label": "k_max=3",
+          "registros_total": 3858,
+          "grupos_total": 1286,
+          "registros_homogeneos": 1950,
+          "grupos_homogeneos": 650,
+          "pct_registros_hom": 50.54,
+          "pct_grupos_hom": 50.54
+        },
+        {
+          "k_max_satisfeito": 4,
+          "label": "k_max=4",
+          "registros_total": 3356,
+          "grupos_total": 839,
+          "registros_homogeneos": 1276,
+          "grupos_homogeneos": 319,
+          "pct_registros_hom": 38.02,
+          "pct_grupos_hom": 38.02
+        },
+        {
+          "k_max_satisfeito": 5,
+          "label": "k_max=5",
+          "registros_total": 116941,
+          "grupos_total": 4695,
+          "registros_homogeneos": 6058,
+          "grupos_homogeneos": 716,
+          "pct_registros_hom": 5.18,
+          "pct_grupos_hom": 15.25
+        }
+      ]
+    }
+  ]
+}

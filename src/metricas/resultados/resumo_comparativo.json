@@ -1,0 +1,59 @@
+{
+  "descricao": "DM e NCP normalizados nos 4 pontos de referencia comparados no relatorio (k-anonimato k=2, l-diversidade distinta l=2, t-proximidade t=0,2, l-diversidade entropia l=2), consolidados a partir dos resumos ja gerados por dm_k/l/t.py e ncp_k/l/t.py.",
+  "k_referencia": 2,
+  "l_referencia": 2,
+  "t_referencia": 0.2,
+  "dm": [
+    {
+      "criterio": "k-anonimato",
+      "parametro": "k=2",
+      "EVOLUCAO": 0.060034,
+      "CLASSI_FIN": 0.060034
+    },
+    {
+      "criterio": "l-diversidade distinta",
+      "parametro": "l=2",
+      "EVOLUCAO": 0.225984,
+      "CLASSI_FIN": 0.276865
+    },
+    {
+      "criterio": "t-proximidade",
+      "parametro": "t=0.2",
+      "EVOLUCAO": 0.391823,
+      "CLASSI_FIN": 0.370697
+    },
+    {
+      "criterio": "l-diversidade entropia",
+      "parametro": "l=2",
+      "EVOLUCAO": 0.778745,
+      "CLASSI_FIN": 0.84429
+    }
+  ],
+  "ncp": [
+    {
+      "criterio": "k-anonimato",
+      "parametro": "k=2",
+      "EVOLUCAO": 0.171475,
+      "CLASSI_FIN": 0.171475
+    },
+    {
+      "criterio": "l-diversidade distinta",
+      "parametro": "l=2",
+      "EVOLUCAO": 0.317832,
+      "CLASSI_FIN": 0.363139
+    },
+    {
+      "criterio": "t-proximidade",
+      "parametro": "t=0.2",
+      "EVOLUCAO": 0.464091,
+      "CLASSI_FIN": 0.445719
+    },
+    {
+      "criterio": "l-diversidade entropia",
+      "parametro": "l=2",
+      "EVOLUCAO": 0.805048,
+      "CLASSI_FIN": 0.862854
+    }
+  ],
+  "ordem_de_custo_concorda_entre_dm_e_ncp": true
+}

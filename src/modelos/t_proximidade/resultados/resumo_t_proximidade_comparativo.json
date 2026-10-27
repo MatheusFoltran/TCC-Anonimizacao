@@ -1,0 +1,60 @@
+{
+  "arquivo_entrada": "src/modelos/k_anonimato/resultados/candidatos.csv",
+  "total_registros_entrada": 137244,
+  "total_registros_avaliados": 124955,
+  "total_registros_excluidos": 12289,
+  "por_t": [
+    {
+      "t": 0.1,
+      "registros_protegido_ambos": 12319,
+      "percentual_protegido_ambos": 9.8587,
+      "registros_vulneravel_so_evolucao": 22300,
+      "percentual_vulneravel_so_evolucao": 17.8464,
+      "registros_vulneravel_so_classi_fin": 24477,
+      "percentual_vulneravel_so_classi_fin": 19.5887,
+      "registros_vulneravel_ambos": 65859,
+      "percentual_vulneravel_ambos": 52.7062,
+      "registros_vulneravel_pelo_menos_um": 112636,
+      "percentual_vulneravel_pelo_menos_um": 90.1413
+    },
+    {
+      "t": 0.15,
+      "registros_protegido_ambos": 33382,
+      "percentual_protegido_ambos": 26.7152,
+      "registros_vulneravel_so_evolucao": 23101,
+      "percentual_vulneravel_so_evolucao": 18.4875,
+      "registros_vulneravel_so_classi_fin": 24664,
+      "percentual_vulneravel_so_classi_fin": 19.7383,
+      "registros_vulneravel_ambos": 43808,
+      "percentual_vulneravel_ambos": 35.059,
+      "registros_vulneravel_pelo_menos_um": 91573,
+      "percentual_vulneravel_pelo_menos_um": 73.2848
+    },
+    {
+      "t": 0.2,
+      "registros_protegido_ambos": 59459,
+      "percentual_protegido_ambos": 47.5843,
+      "registros_vulneravel_so_evolucao": 17620,
+      "percentual_vulneravel_so_evolucao": 14.1011,
+      "registros_vulneravel_so_classi_fin": 16604,
+      "percentual_vulneravel_so_classi_fin": 13.288,
+      "registros_vulneravel_ambos": 31272,
+      "percentual_vulneravel_ambos": 25.0266,
+      "registros_vulneravel_pelo_menos_um": 65496,
+      "percentual_vulneravel_pelo_menos_um": 52.4157
+    },
+    {
+      "t": 0.3,
+      "registros_protegido_ambos": 100433,
+      "percentual_protegido_ambos": 80.3753,
+      "registros_vulneravel_so_evolucao": 8478,
+      "percentual_vulneravel_so_evolucao": 6.7848,
+      "registros_vulneravel_so_classi_fin": 14606,
+      "percentual_vulneravel_so_classi_fin": 11.689,
+      "registros_vulneravel_ambos": 1438,
+      "percentual_vulneravel_ambos": 1.1508,
+      "registros_vulneravel_pelo_menos_um": 24522,
+      "percentual_vulneravel_pelo_menos_um": 19.6247
+    }
+  ]
+}

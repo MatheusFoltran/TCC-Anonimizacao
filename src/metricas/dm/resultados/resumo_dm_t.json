@@ -1,0 +1,68 @@
+{
+  "arquivo_entrada": "src/modelos/k_anonimato/resultados/candidatos.csv",
+  "descricao": "DM (Bayardo & Agrawal, 2005) generalizado: mesmo bloco QI puro e penalidade do DM_k (src/metricas/dm/dm_k.py), trocando o criterio de conformidade para emd_do_bloco <= t (t-proximidade). |D| e o total AVALIADO por atributo sensivel (exclui nulos), nao o total da base inteira.",
+  "por_atributo_sensivel": [
+    {
+      "atributo_sensivel": "EVOLUCAO",
+      "total_registros_avaliados": 124960,
+      "total_registros_nulos_excluidos": 12284,
+      "por_t": [
+        {
+          "t": 0.1,
+          "dm": 11021698718,
+          "dm_maximo_teorico": 15615001600,
+          "dm_normalizado": 0.70584
+        },
+        {
+          "t": 0.15,
+          "dm": 8368430476,
+          "dm_maximo_teorico": 15615001600,
+          "dm_normalizado": 0.535922
+        },
+        {
+          "t": 0.2,
+          "dm": 6118313999,
+          "dm_maximo_teorico": 15615001600,
+          "dm_normalizado": 0.391823
+        },
+        {
+          "t": 0.3,
+          "dm": 1249449488,
+          "dm_maximo_teorico": 15615001600,
+          "dm_normalizado": 0.080016
+        }
+      ]
+    },
+    {
+      "atributo_sensivel": "CLASSI_FIN",
+      "total_registros_avaliados": 136940,
+      "total_registros_nulos_excluidos": 304,
+      "por_t": [
+        {
+          "t": 0.1,
+          "dm": 13513660996,
+          "dm_maximo_teorico": 18752563600,
+          "dm_normalizado": 0.72063
+        },
+        {
+          "t": 0.15,
+          "dm": 10109342795,
+          "dm_maximo_teorico": 18752563600,
+          "dm_normalizado": 0.539091
+        },
+        {
+          "t": 0.2,
+          "dm": 6951516829,
+          "dm_maximo_teorico": 18752563600,
+          "dm_normalizado": 0.370697
+        },
+        {
+          "t": 0.3,
+          "dm": 2303780356,
+          "dm_maximo_teorico": 18752563600,
+          "dm_normalizado": 0.122851
+        }
+      ]
+    }
+  ]
+}

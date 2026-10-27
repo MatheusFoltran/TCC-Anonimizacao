@@ -1,0 +1,122 @@
+{
+  "arquivo_entrada": "src/modelos/k_anonimato/resultados/candidatos.csv",
+  "total_registros_entrada": 137244,
+  "total_registros_avaliados": 124955,
+  "total_registros_excluidos": 12289,
+  "por_metodo": [
+    {
+      "metodo": "distinta",
+      "por_l": [
+        {
+          "l": 2,
+          "registros_protegido_ambos": 76298,
+          "percentual_protegido_ambos": 61.0604,
+          "registros_vulneravel_so_evolucao": 14275,
+          "percentual_vulneravel_so_evolucao": 11.4241,
+          "registros_vulneravel_so_classi_fin": 20500,
+          "percentual_vulneravel_so_classi_fin": 16.4059,
+          "registros_vulneravel_ambos": 13882,
+          "percentual_vulneravel_ambos": 11.1096,
+          "registros_vulneravel_pelo_menos_um": 48657,
+          "percentual_vulneravel_pelo_menos_um": 38.9396
+        },
+        {
+          "l": 3,
+          "registros_protegido_ambos": 14244,
+          "percentual_protegido_ambos": 11.3993,
+          "registros_vulneravel_so_evolucao": 22900,
+          "percentual_vulneravel_so_evolucao": 18.3266,
+          "registros_vulneravel_so_classi_fin": 21867,
+          "percentual_vulneravel_so_classi_fin": 17.4999,
+          "registros_vulneravel_ambos": 65944,
+          "percentual_vulneravel_ambos": 52.7742,
+          "registros_vulneravel_pelo_menos_um": 110711,
+          "percentual_vulneravel_pelo_menos_um": 88.6007
+        },
+        {
+          "l": 4,
+          "registros_protegido_ambos": 211,
+          "percentual_protegido_ambos": 0.1689,
+          "registros_vulneravel_so_evolucao": 7152,
+          "percentual_vulneravel_so_evolucao": 5.7237,
+          "registros_vulneravel_so_classi_fin": 3849,
+          "percentual_vulneravel_so_classi_fin": 3.0803,
+          "registros_vulneravel_ambos": 113743,
+          "percentual_vulneravel_ambos": 91.0272,
+          "registros_vulneravel_pelo_menos_um": 124744,
+          "percentual_vulneravel_pelo_menos_um": 99.8311
+        },
+        {
+          "l": 5,
+          "registros_protegido_ambos": 0,
+          "percentual_protegido_ambos": 0.0,
+          "registros_vulneravel_so_evolucao": 465,
+          "percentual_vulneravel_so_evolucao": 0.3721,
+          "registros_vulneravel_so_classi_fin": 0,
+          "percentual_vulneravel_so_classi_fin": 0.0,
+          "registros_vulneravel_ambos": 124490,
+          "percentual_vulneravel_ambos": 99.6279,
+          "registros_vulneravel_pelo_menos_um": 124955,
+          "percentual_vulneravel_pelo_menos_um": 100.0
+        }
+      ]
+    },
+    {
+      "metodo": "entropia",
+      "por_l": [
+        {
+          "l": 2,
+          "registros_protegido_ambos": 5224,
+          "percentual_protegido_ambos": 4.1807,
+          "registros_vulneravel_so_evolucao": 14463,
+          "percentual_vulneravel_so_evolucao": 11.5746,
+          "registros_vulneravel_so_classi_fin": 22446,
+          "percentual_vulneravel_so_classi_fin": 17.9633,
+          "registros_vulneravel_ambos": 82822,
+          "percentual_vulneravel_ambos": 66.2815,
+          "registros_vulneravel_pelo_menos_um": 119731,
+          "percentual_vulneravel_pelo_menos_um": 95.8193
+        },
+        {
+          "l": 3,
+          "registros_protegido_ambos": 0,
+          "percentual_protegido_ambos": 0.0,
+          "registros_vulneravel_so_evolucao": 95,
+          "percentual_vulneravel_so_evolucao": 0.076,
+          "registros_vulneravel_so_classi_fin": 296,
+          "percentual_vulneravel_so_classi_fin": 0.2369,
+          "registros_vulneravel_ambos": 124564,
+          "percentual_vulneravel_ambos": 99.6871,
+          "registros_vulneravel_pelo_menos_um": 124955,
+          "percentual_vulneravel_pelo_menos_um": 100.0
+        },
+        {
+          "l": 4,
+          "registros_protegido_ambos": 0,
+          "percentual_protegido_ambos": 0.0,
+          "registros_vulneravel_so_evolucao": 0,
+          "percentual_vulneravel_so_evolucao": 0.0,
+          "registros_vulneravel_so_classi_fin": 16,
+          "percentual_vulneravel_so_classi_fin": 0.0128,
+          "registros_vulneravel_ambos": 124939,
+          "percentual_vulneravel_ambos": 99.9872,
+          "registros_vulneravel_pelo_menos_um": 124955,
+          "percentual_vulneravel_pelo_menos_um": 100.0
+        },
+        {
+          "l": 5,
+          "registros_protegido_ambos": 0,
+          "percentual_protegido_ambos": 0.0,
+          "registros_vulneravel_so_evolucao": 0,
+          "percentual_vulneravel_so_evolucao": 0.0,
+          "registros_vulneravel_so_classi_fin": 0,
+          "percentual_vulneravel_so_classi_fin": 0.0,
+          "registros_vulneravel_ambos": 124955,
+          "percentual_vulneravel_ambos": 100.0,
+          "registros_vulneravel_pelo_menos_um": 124955,
+          "percentual_vulneravel_pelo_menos_um": 100.0
+        }
+      ]
+    }
+  ]
+}

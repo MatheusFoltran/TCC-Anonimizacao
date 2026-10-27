@@ -1,0 +1,68 @@
+{
+  "arquivo_entrada": "src/modelos/k_anonimato/resultados/candidatos.csv",
+  "descricao": "NCP (Xu et al., KDD'06) generalizado: mesmo custo fixo por registro do NCP_k (src/metricas/ncp/ncp_k.py), trocando o criterio de conformidade para emd_do_bloco <= t (t-proximidade). |D| e o total AVALIADO por atributo sensivel (exclui nulos), nao o total da base inteira.",
+  "por_atributo_sensivel": [
+    {
+      "atributo_sensivel": "EVOLUCAO",
+      "total_registros_avaliados": 124960,
+      "total_registros_nulos_excluidos": 12284,
+      "por_t": [
+        {
+          "t": 0.1,
+          "ncp": 462830.2193,
+          "ncp_maximo_teorico": 624800.0,
+          "ncp_normalizado": 0.740765
+        },
+        {
+          "t": 0.15,
+          "ncp": 369312.455,
+          "ncp_maximo_teorico": 624800.0,
+          "ncp_normalizado": 0.591089
+        },
+        {
+          "t": 0.2,
+          "ncp": 289964.0817,
+          "ncp_maximo_teorico": 624800.0,
+          "ncp_normalizado": 0.464091
+        },
+        {
+          "t": 0.3,
+          "ncp": 118149.0954,
+          "ncp_maximo_teorico": 624800.0,
+          "ncp_normalizado": 0.189099
+        }
+      ]
+    },
+    {
+      "atributo_sensivel": "CLASSI_FIN",
+      "total_registros_avaliados": 136940,
+      "total_registros_nulos_excluidos": 304,
+      "por_t": [
+        {
+          "t": 0.1,
+          "ncp": 516210.6093,
+          "ncp_maximo_teorico": 684700.0,
+          "ncp_normalizado": 0.753922
+        },
+        {
+          "t": 0.15,
+          "ncp": 406723.9418,
+          "ncp_maximo_teorico": 684700.0,
+          "ncp_normalizado": 0.594018
+        },
+        {
+          "t": 0.2,
+          "ncp": 305183.9615,
+          "ncp_maximo_teorico": 684700.0,
+          "ncp_normalizado": 0.445719
+        },
+        {
+          "t": 0.3,
+          "ncp": 155263.9703,
+          "ncp_maximo_teorico": 684700.0,
+          "ncp_normalizado": 0.226762
+        }
+      ]
+    }
+  ]
+}

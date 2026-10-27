@@ -1,0 +1,94 @@
+{
+  "arquivo_entrada": "base_filtrada/dados_filtro_base.csv",
+  "total_registros": 137244,
+  "total_grupos": 129422,
+  "registros_candidatos": 14782,
+  "percentual_registros_candidatos": 10.7706,
+  "thresholds": {
+    "dt_sin_dias": [
+      0,
+      3,
+      7,
+      14
+    ],
+    "dt_notific_dias": [
+      1,
+      7,
+      14,
+      21
+    ],
+    "tam_penalidade_leve": 5
+  },
+  "etapas_funil": [
+    {
+      "etapa": "etapa_1",
+      "descricao": "DT_NASC + CO_MUN_RES + CS_SEXO",
+      "colunas": "DT_NASC,CO_MUN_RES,CS_SEXO",
+      "grupos_total": 120005,
+      "grupos_suspeitos": 14689,
+      "registros_suspeitos": 31928,
+      "percentual_registros_suspeitos": 23.2637,
+      "maior_grupo": 7,
+      "pares_possiveis": 20379
+    },
+    {
+      "etapa": "etapa_2",
+      "descricao": "DT_NASC + CO_MUN_RES + CS_SEXO + CS_RACA",
+      "colunas": "DT_NASC,CO_MUN_RES,CS_SEXO,CS_RACA",
+      "grupos_total": 126598,
+      "grupos_suspeitos": 9518,
+      "registros_suspeitos": 20164,
+      "percentual_registros_suspeitos": 14.6921,
+      "maior_grupo": 6,
+      "pares_possiveis": 11961
+    },
+    {
+      "etapa": "etapa_3",
+      "descricao": "DT_NASC + CO_MUN_RES + CS_SEXO + CS_RACA + CO_MUN_NOT",
+      "colunas": "DT_NASC,CO_MUN_RES,CS_SEXO,CS_RACA,CO_MUN_NOT",
+      "grupos_total": 129422,
+      "grupos_suspeitos": 6960,
+      "registros_suspeitos": 14782,
+      "percentual_registros_suspeitos": 10.7706,
+      "maior_grupo": 6,
+      "pares_possiveis": 8835
+    }
+  ],
+  "analise_grupos": {
+    "distribuicao_tamanho_grupos": {
+      "1": 122462,
+      "2": 6221,
+      "3": 641,
+      "4": 76,
+      "5": 19,
+      "6": 3
+    },
+    "distribuicao_confianca_mesma_pessoa": {
+      "baixa": 5836,
+      "media": 398,
+      "alta": 726
+    },
+    "distribuicao_score_dt_sin": {
+      "baixa": 5492,
+      "media": 362,
+      "alta": 1106
+    },
+    "distribuicao_score_dt_notific": {
+      "baixa": 5250,
+      "media": 490,
+      "alta": 1220
+    },
+    "distribuicao_faixa_dispersao_dt_sin": {
+      "muito forte": 122835,
+      "forte": 733,
+      "plausivel": 362,
+      "suspeito": 382,
+      "muito improvavel": 5110
+    },
+    "media_dispersao_dt_sin": 4.2235,
+    "media_dispersao_dt_notific": 4.3809,
+    "taxa_grupos_inconsistentes_obito": 0.0099,
+    "total_grupos_inconsistentes_obito": 1279,
+    "total_registros_caso_forte": 1456
+  }
+}

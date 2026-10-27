@@ -1,0 +1,24 @@
+{
+  "cenario": 2,
+  "nome_cenario": "heterogeneo",
+  "descricao": "Controle negativo: alvos em classes heterogeneas (mais de um valor distinto do atributo sensivel), onde o ataque nao deve ter sucesso.",
+  "descricao_breakdown_nao_atinge_k": "Ataques bem-sucedidos contra grupos que satisfazem k demonstram vulnerabilidade real do k-anonimato ao ataque de homogeneidade.",
+  "por_atributo_sensivel": [
+    {
+      "atributo_sensivel": "EVOLUCAO",
+      "total_alvos": 10,
+      "ataques_encontrados": 0,
+      "taxa_sucesso": 0.0,
+      "breakdown_nao_atinge_k": [],
+      "alvos_confirmados": []
+    },
+    {
+      "atributo_sensivel": "CLASSI_FIN",
+      "total_alvos": 10,
+      "ataques_encontrados": 0,
+      "taxa_sucesso": 0.0,
+      "breakdown_nao_atinge_k": [],
+      "alvos_confirmados": []
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "arquivo_entrada": "src/modelos/k_anonimato/resultados/candidatos.csv",
+  "descricao": "NCP (Xu et al., KDD'06) generalizado: mesmo custo fixo por registro do NCP_k (src/metricas/ncp/ncp_k.py), trocando o criterio de conformidade para distintos/entropia do bloco QI+outro-atributo-sensivel (Def. 4.6, l-diversidade). |D| e o total AVALIADO por atributo sensivel (exclui nulos), nao o total da base inteira.",
+  "por_atributo_sensivel": [
+    {
+      "atributo_sensivel": "EVOLUCAO",
+      "total_registros_avaliados": 124960,
+      "total_registros_nulos_excluidos": 12284,
+      "por_l": [
+        {
+          "l": 2,
+          "limiar_log_l": 0.693147,
+          "distinta": {
+            "ncp": 198581.244,
+            "ncp_maximo_teorico": 624800.0,
+            "ncp_normalizado": 0.317832
+          },
+          "entropia": {
+            "ncp": 502994.1507,
+            "ncp_maximo_teorico": 624800.0,
+            "ncp_normalizado": 0.805048
+          }
+        },
+        {
+          "l": 3,
+          "limiar_log_l": 1.098612,
+          "distinta": {
+            "ncp": 466007.8579,
+            "ncp_maximo_teorico": 624800.0,
+            "ncp_normalizado": 0.745851
+          },
+          "entropia": {
+            "ncp": 623496.2303,
+            "ncp_maximo_teorico": 624800.0,
+            "ncp_normalizado": 0.997913
+          }
+        },
+        {
+          "l": 4,
+          "limiar_log_l": 1.386294,
+          "distinta": {
+            "ncp": 606944.5746,
+            "ncp_maximo_teorico": 624800.0,
+            "ncp_normalizado": 0.971422
+          },
+          "entropia": {
+            "ncp": 624729.3652,
+            "ncp_maximo_teorico": 624800.0,
+            "ncp_normalizado": 0.999887
+          }
+        },
+        {
+          "l": 5,
+          "limiar_log_l": 1.609438,
+          "distinta": {
+            "ncp": 624800.0,
+            "ncp_maximo_teorico": 624800.0,
+            "ncp_normalizado": 1.0
+          },
+          "entropia": {
+            "ncp": 624800.0,
+            "ncp_maximo_teorico": 624800.0,
+            "ncp_normalizado": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "atributo_sensivel": "CLASSI_FIN",
+      "total_registros_avaliados": 136940,
+      "total_registros_nulos_excluidos": 304,
+      "por_l": [
+        {
+          "l": 2,
+          "limiar_log_l": 0.693147,
+          "distinta": {
+            "ncp": 248641.4578,
+            "ncp_maximo_teorico": 684700.0,
+            "ncp_normalizado": 0.363139
+          },
+          "entropia": {
+            "ncp": 590796.3538,
+            "ncp_maximo_teorico": 684700.0,
+            "ncp_normalizado": 0.862854
+          }
+        },
+        {
+          "l": 3,
+          "limiar_log_l": 1.098612,
+          "distinta": {
+            "ncp": 509292.7449,
+            "ncp_maximo_teorico": 684700.0,
+            "ncp_normalizado": 0.743819
+          },
+          "entropia": {
+            "ncp": 684278.9444,
+            "ncp_maximo_teorico": 684700.0,
+            "ncp_normalizado": 0.999385
+          }
+        },
+        {
+          "l": 4,
+          "limiar_log_l": 1.386294,
+          "distinta": {
+            "ncp": 651487.5151,
+            "ncp_maximo_teorico": 684700.0,
+            "ncp_normalizado": 0.951493
+          },
+          "entropia": {
+            "ncp": 684700.0,
+            "ncp_maximo_teorico": 684700.0,
+            "ncp_normalizado": 1.0
+          }
+        },
+        {
+          "l": 5,
+          "limiar_log_l": 1.609438,
+          "distinta": {
+            "ncp": 682660.3388,
+            "ncp_maximo_teorico": 684700.0,
+            "ncp_normalizado": 0.997021
+          },
+          "entropia": {
+            "ncp": 684700.0,
+            "ncp_maximo_teorico": 684700.0,
+            "ncp_normalizado": 1.0
+          }
+        }
+      ]
+    }
+  ]
+}

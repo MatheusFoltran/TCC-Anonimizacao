@@ -1,0 +1,9 @@
+metrica;criterio;parametro;EVOLUCAO;CLASSI_FIN
+DM;k-anonimato;k=2;0.060034;0.060034
+DM;l-diversidade distinta;l=2;0.225984;0.276865
+DM;t-proximidade;t=0.2;0.391823;0.370697
+DM;l-diversidade entropia;l=2;0.778745;0.84429
+NCP;k-anonimato;k=2;0.171475;0.171475
+NCP;l-diversidade distinta;l=2;0.317832;0.363139
+NCP;t-proximidade;t=0.2;0.464091;0.445719
+NCP;l-diversidade entropia;l=2;0.805048;0.862854

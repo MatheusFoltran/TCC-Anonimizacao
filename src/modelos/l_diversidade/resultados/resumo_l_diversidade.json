@@ -1,0 +1,167 @@
+{
+  "arquivo_entrada": "src/modelos/k_anonimato/resultados/candidatos.csv",
+  "total_registros_entrada": 137244,
+  "por_atributo_sensivel": [
+    {
+      "atributo_sensivel": "EVOLUCAO",
+      "total_registros_avaliados": 124960,
+      "total_registros_nulos_excluidos": 12284,
+      "total_grupos": 23577,
+      "distribuicao_distintos": {
+        "1": 16578,
+        "2": 5839,
+        "3": 1049,
+        "4": 111
+      },
+      "l_efetivo_medio": 1.2697,
+      "l_efetivo_minimo": 1.0,
+      "por_l": [
+        {
+          "l": 2,
+          "distinta": {
+            "grupos_abaixo_l": 16578,
+            "percentual_grupos_abaixo_l": 70.3143,
+            "registros_abaixo_l": 28162,
+            "percentual_registros_abaixo_l": 22.5368
+          },
+          "entropia": {
+            "limiar_log_l": 0.693147,
+            "grupos_abaixo_l": 21095,
+            "percentual_grupos_abaixo_l": 89.4728,
+            "registros_abaixo_l": 97290,
+            "percentual_registros_abaixo_l": 77.8569
+          }
+        },
+        {
+          "l": 3,
+          "distinta": {
+            "grupos_abaixo_l": 22417,
+            "percentual_grupos_abaixo_l": 95.08,
+            "registros_abaixo_l": 88849,
+            "percentual_registros_abaixo_l": 71.102
+          },
+          "entropia": {
+            "limiar_log_l": 1.098612,
+            "grupos_abaixo_l": 23551,
+            "percentual_grupos_abaixo_l": 99.8897,
+            "registros_abaixo_l": 124664,
+            "percentual_registros_abaixo_l": 99.7631
+          }
+        },
+        {
+          "l": 4,
+          "distinta": {
+            "grupos_abaixo_l": 23466,
+            "percentual_grupos_abaixo_l": 99.5292,
+            "registros_abaixo_l": 120900,
+            "percentual_registros_abaixo_l": 96.751
+          },
+          "entropia": {
+            "limiar_log_l": 1.386294,
+            "grupos_abaixo_l": 23573,
+            "percentual_grupos_abaixo_l": 99.983,
+            "registros_abaixo_l": 124944,
+            "percentual_registros_abaixo_l": 99.9872
+          }
+        },
+        {
+          "l": 5,
+          "distinta": {
+            "grupos_abaixo_l": 23577,
+            "percentual_grupos_abaixo_l": 100.0,
+            "registros_abaixo_l": 124960,
+            "percentual_registros_abaixo_l": 100.0
+          },
+          "entropia": {
+            "limiar_log_l": 1.609438,
+            "grupos_abaixo_l": 23577,
+            "percentual_grupos_abaixo_l": 100.0,
+            "registros_abaixo_l": 124960,
+            "percentual_registros_abaixo_l": 100.0
+          }
+        }
+      ]
+    },
+    {
+      "atributo_sensivel": "CLASSI_FIN",
+      "total_registros_avaliados": 136940,
+      "total_registros_nulos_excluidos": 304,
+      "total_grupos": 27781,
+      "distribuicao_distintos": {
+        "1": 21012,
+        "2": 5648,
+        "3": 1024,
+        "4": 93,
+        "5": 4
+      },
+      "l_efetivo_medio": 1.208,
+      "l_efetivo_minimo": 1.0,
+      "por_l": [
+        {
+          "l": 2,
+          "distinta": {
+            "grupos_abaixo_l": 21012,
+            "percentual_grupos_abaixo_l": 75.6344,
+            "registros_abaixo_l": 37832,
+            "percentual_registros_abaixo_l": 27.6267
+          },
+          "entropia": {
+            "limiar_log_l": 0.693147,
+            "grupos_abaixo_l": 25582,
+            "percentual_grupos_abaixo_l": 92.0845,
+            "registros_abaixo_l": 115602,
+            "percentual_registros_abaixo_l": 84.418
+          }
+        },
+        {
+          "l": 3,
+          "distinta": {
+            "grupos_abaixo_l": 26660,
+            "percentual_grupos_abaixo_l": 95.9649,
+            "registros_abaixo_l": 97017,
+            "percentual_registros_abaixo_l": 70.8464
+          },
+          "entropia": {
+            "limiar_log_l": 1.098612,
+            "grupos_abaixo_l": 27771,
+            "percentual_grupos_abaixo_l": 99.964,
+            "registros_abaixo_l": 136845,
+            "percentual_registros_abaixo_l": 99.9306
+          }
+        },
+        {
+          "l": 4,
+          "distinta": {
+            "grupos_abaixo_l": 27684,
+            "percentual_grupos_abaixo_l": 99.6508,
+            "registros_abaixo_l": 129374,
+            "percentual_registros_abaixo_l": 94.475
+          },
+          "entropia": {
+            "limiar_log_l": 1.386294,
+            "grupos_abaixo_l": 27781,
+            "percentual_grupos_abaixo_l": 100.0,
+            "registros_abaixo_l": 136940,
+            "percentual_registros_abaixo_l": 100.0
+          }
+        },
+        {
+          "l": 5,
+          "distinta": {
+            "grupos_abaixo_l": 27777,
+            "percentual_grupos_abaixo_l": 99.9856,
+            "registros_abaixo_l": 136475,
+            "percentual_registros_abaixo_l": 99.6604
+          },
+          "entropia": {
+            "limiar_log_l": 1.609438,
+            "grupos_abaixo_l": 27781,
+            "percentual_grupos_abaixo_l": 100.0,
+            "registros_abaixo_l": 136940,
+            "percentual_registros_abaixo_l": 100.0
+          }
+        }
+      ]
+    }
+  ]
+}
