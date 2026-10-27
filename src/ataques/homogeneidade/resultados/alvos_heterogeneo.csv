@@ -1,0 +1,21 @@
+atributo_sensivel;alvo_id;nome;DT_NASC;CO_MUN_RES;CS_SEXO;CS_RACA;CO_MUN_NOT;valores_no_grupo
+EVOLUCAO;1;Alvo Heterogeneo 1;1975;15° RS - Maringa;M;3;15° RS - Maringa;1|2
+EVOLUCAO;2;Alvo Heterogeneo 2;1954;08° RS - Francisco Beltrao;M;9;08° RS - Francisco Beltrao;1|2|3
+EVOLUCAO;3;Alvo Heterogeneo 3;1943;18° RS - Cornelio Procopio;F;1;17° RS - Londrina;1|3
+EVOLUCAO;4;Alvo Heterogeneo 4;1935;15° RS - Maringa;M;3;15° RS - Maringa;1|3
+EVOLUCAO;5;Alvo Heterogeneo 5;1948;08° RS - Francisco Beltrao;M;1;08° RS - Francisco Beltrao;1|2|3
+EVOLUCAO;6;Alvo Heterogeneo 6;1996;18° RS - Cornelio Procopio;F;1;18° RS - Cornelio Procopio;1|2
+EVOLUCAO;7;Alvo Heterogeneo 7;1984;20° RS - Toledo;M;1;10° RS - Cascavel;1|2
+EVOLUCAO;8;Alvo Heterogeneo 8;1929;03° RS - Ponta Grossa;F;1;03° RS - Ponta Grossa;1|2
+EVOLUCAO;9;Alvo Heterogeneo 9;1961;02° RS - Metropolitana;M;3;02° RS - Metropolitana;1|2
+EVOLUCAO;10;Alvo Heterogeneo 10;1952;05° RS - Guarapuava;M;4;05° RS - Guarapuava;1|2
+CLASSI_FIN;1;Alvo Heterogeneo 1;1967;15° RS - Maringa;F;1;15° RS - Maringa;4|5
+CLASSI_FIN;2;Alvo Heterogeneo 2;1928;17° RS - Londrina;M;1;17° RS - Londrina;3|4|5
+CLASSI_FIN;3;Alvo Heterogeneo 3;1988;17° RS - Londrina;F;4;17° RS - Londrina;4|5
+CLASSI_FIN;4;Alvo Heterogeneo 4;2018;18° RS - Cornelio Procopio;M;1;17° RS - Londrina;4|5
+CLASSI_FIN;5;Alvo Heterogeneo 5;1972;02° RS - Metropolitana;M;1;02° RS - Metropolitana;4|5
+CLASSI_FIN;6;Alvo Heterogeneo 6;1925;02° RS - Metropolitana;F;1;02° RS - Metropolitana;4|5
+CLASSI_FIN;7;Alvo Heterogeneo 7;1949;02° RS - Metropolitana;F;2;02° RS - Metropolitana;4|5
+CLASSI_FIN;8;Alvo Heterogeneo 8;1940;09° RS - Foz Do Iguacu;M;4;09° RS - Foz Do Iguacu;4|5
+CLASSI_FIN;9;Alvo Heterogeneo 9;1943;17° RS - Londrina;M;1;17° RS - Londrina;4|5
+CLASSI_FIN;10;Alvo Heterogeneo 10;1946;21° RS - Telemaco Borba;F;1;21° RS - Telemaco Borba;4|5

@@ -1,0 +1,21 @@
+atributo_sensivel;alvo_id;nome;DT_NASC;CO_MUN_RES;CS_SEXO;CS_RACA;CO_MUN_NOT;valor_sensivel;tamanho_grupo_qi;nao_atinge_k2;nao_atinge_k3;nao_atinge_k4;nao_atinge_k5;confianca_mesma_pessoa;ataque_bem_sucedido
+EVOLUCAO;1;Alvo Homogeneo 1;1996;15° RS - Maringa;M;9;15° RS - Maringa;1;2;False;True;True;True;baixa;True
+EVOLUCAO;2;Alvo Homogeneo 2;1996;05° RS - Guarapuava;M;1;05° RS - Guarapuava;1;6;False;False;False;False;baixa;True
+EVOLUCAO;3;Alvo Homogeneo 3;1991;07° RS - Pato Branco;F;1;07° RS - Pato Branco;1;7;False;False;False;False;baixa;True
+EVOLUCAO;4;Alvo Homogeneo 4;1971;19° RS - Jacarezinho;F;1;16° RS - Apucarana;1;2;False;True;True;True;baixa;True
+EVOLUCAO;5;Alvo Homogeneo 5;1989;07° RS - Pato Branco;M;9;07° RS - Pato Branco;1;2;False;True;True;True;baixa;True
+EVOLUCAO;6;Alvo Homogeneo 6;1954;01° RS - Paranagua;M;4;01° RS - Paranagua;1;4;False;False;False;True;baixa;True
+EVOLUCAO;7;Alvo Homogeneo 7;1934;11° RS - Campo Mourao;M;4;11° RS - Campo Mourao;1;3;False;False;True;True;baixa;True
+EVOLUCAO;8;Alvo Homogeneo 8;1976;20° RS - Toledo;M;1;10° RS - Cascavel;1;3;False;False;True;True;baixa;True
+EVOLUCAO;9;Alvo Homogeneo 9;1960;13° RS - Cianorte;F;1;15° RS - Maringa;1;2;False;True;True;True;baixa;True
+EVOLUCAO;10;Alvo Homogeneo 10;1986;04° RS - Irati;F;1;04° RS - Irati;1;9;False;False;False;False;baixa;True
+CLASSI_FIN;1;Alvo Homogeneo 1;1950;01° RS - Paranagua;F;9;02° RS - Metropolitana;5;3;False;False;True;True;baixa;True
+CLASSI_FIN;2;Alvo Homogeneo 2;1990;13° RS - Cianorte;M;1;13° RS - Cianorte;5;5;False;False;False;False;baixa;True
+CLASSI_FIN;3;Alvo Homogeneo 3;1943;18° RS - Cornelio Procopio;F;1;16° RS - Apucarana;5;2;False;True;True;True;baixa;True
+CLASSI_FIN;4;Alvo Homogeneo 4;1965;18° RS - Cornelio Procopio;M;4;18° RS - Cornelio Procopio;5;4;False;False;False;True;baixa;True
+CLASSI_FIN;5;Alvo Homogeneo 5;1980;02° RS - Metropolitana;M;3;02° RS - Metropolitana;5;2;False;True;True;True;baixa;True
+CLASSI_FIN;6;Alvo Homogeneo 6;1956;22° RS - Ivaipora;M;1;22° RS - Ivaipora;5;4;False;False;False;True;baixa;True
+CLASSI_FIN;7;Alvo Homogeneo 7;1960;04° RS - Irati;M;1;05° RS - Guarapuava;5;2;False;True;True;True;baixa;True
+CLASSI_FIN;8;Alvo Homogeneo 8;1932;07° RS - Pato Branco;F;1;08° RS - Francisco Beltrao;5;2;False;True;True;True;baixa;True
+CLASSI_FIN;9;Alvo Homogeneo 9;1983;21° RS - Telemaco Borba;M;1;03° RS - Ponta Grossa;5;3;False;False;True;True;baixa;True
+CLASSI_FIN;10;Alvo Homogeneo 10;1968;08° RS - Francisco Beltrao;F;1;SC;5;2;False;True;True;True;baixa;True

@@ -153,15 +153,16 @@ e um JSON de resumo com a metodologia e os números agregados).
 
 ## Resultados
 
-Este repositório versiona apenas os resultados agregados: os JSONs de resumo
-de cada etapa (dos quais as figuras são geradas) e as tabelas de DM, NCP e das
-análises comparativas por *k*.
+Este repositório versiona todas as saídas do pipeline, para que os números do
+TCC possam ser conferidos sem executá-lo. Isso inclui os JSONs de resumo de
+cada etapa (dos quais as figuras são geradas) e as tabelas em nível de
+registro, como a base com as classes de equivalência, os blocos de
+*ℓ*-diversidade e *t*-proximidade e os alvos sorteados nas simulações dos
+ataques.
 
-As saídas em nível de registro (por exemplo, a base com as classes de
-equivalência, os blocos de *ℓ*-diversidade e *t*-proximidade e os alvos
-simulados dos ataques) não são versionadas, porque contêm combinações de
-quase-identificadores e atributos sensíveis de registros reais. Elas são
-recriadas nas mesmas subpastas `resultados/` ao executar o pipeline.
+Executar o pipeline novamente sobre `base_filtrada/dados_filtro_base.csv`
+recria esses arquivos nas mesmas subpastas `resultados/`, com os mesmos
+valores.
 
 ## Licença
 

@@ -1,0 +1,21 @@
+atributo_sensivel;alvo_id;nome;DT_NASC;CO_MUN_RES;CS_SEXO;CS_RACA;CO_MUN_NOT
+EVOLUCAO;1;Alvo Homogeneo 1;1996;15° RS - Maringa;M;9;15° RS - Maringa
+EVOLUCAO;2;Alvo Homogeneo 2;1996;05° RS - Guarapuava;M;1;05° RS - Guarapuava
+EVOLUCAO;3;Alvo Homogeneo 3;1991;07° RS - Pato Branco;F;1;07° RS - Pato Branco
+EVOLUCAO;4;Alvo Homogeneo 4;1971;19° RS - Jacarezinho;F;1;16° RS - Apucarana
+EVOLUCAO;5;Alvo Homogeneo 5;1989;07° RS - Pato Branco;M;9;07° RS - Pato Branco
+EVOLUCAO;6;Alvo Homogeneo 6;1954;01° RS - Paranagua;M;4;01° RS - Paranagua
+EVOLUCAO;7;Alvo Homogeneo 7;1934;11° RS - Campo Mourao;M;4;11° RS - Campo Mourao
+EVOLUCAO;8;Alvo Homogeneo 8;1976;20° RS - Toledo;M;1;10° RS - Cascavel
+EVOLUCAO;9;Alvo Homogeneo 9;1960;13° RS - Cianorte;F;1;15° RS - Maringa
+EVOLUCAO;10;Alvo Homogeneo 10;1986;04° RS - Irati;F;1;04° RS - Irati
+CLASSI_FIN;1;Alvo Homogeneo 1;1950;01° RS - Paranagua;F;9;02° RS - Metropolitana
+CLASSI_FIN;2;Alvo Homogeneo 2;1990;13° RS - Cianorte;M;1;13° RS - Cianorte
+CLASSI_FIN;3;Alvo Homogeneo 3;1943;18° RS - Cornelio Procopio;F;1;16° RS - Apucarana
+CLASSI_FIN;4;Alvo Homogeneo 4;1965;18° RS - Cornelio Procopio;M;4;18° RS - Cornelio Procopio
+CLASSI_FIN;5;Alvo Homogeneo 5;1980;02° RS - Metropolitana;M;3;02° RS - Metropolitana
+CLASSI_FIN;6;Alvo Homogeneo 6;1956;22° RS - Ivaipora;M;1;22° RS - Ivaipora
+CLASSI_FIN;7;Alvo Homogeneo 7;1960;04° RS - Irati;M;1;05° RS - Guarapuava
+CLASSI_FIN;8;Alvo Homogeneo 8;1932;07° RS - Pato Branco;F;1;08° RS - Francisco Beltrao
+CLASSI_FIN;9;Alvo Homogeneo 9;1983;21° RS - Telemaco Borba;M;1;03° RS - Ponta Grossa
+CLASSI_FIN;10;Alvo Homogeneo 10;1968;08° RS - Francisco Beltrao;F;1;SC

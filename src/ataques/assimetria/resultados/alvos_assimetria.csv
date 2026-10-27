@@ -1,0 +1,21 @@
+atributo_sensivel;alvo_id;nome;DT_NASC;CO_MUN_RES;CS_SEXO;CS_RACA;CO_MUN_NOT;atributo_conhecido;atributo_conhecido_valor;valor_sensivel_real
+EVOLUCAO;1;Alvo Assimetria 1;1961;03° RS - Ponta Grossa;M;1;03° RS - Ponta Grossa;CLASSI_FIN;5;2
+EVOLUCAO;2;Alvo Assimetria 2;1944;11° RS - Campo Mourao;F;2;11° RS - Campo Mourao;CLASSI_FIN;4;3
+EVOLUCAO;3;Alvo Assimetria 3;1938;02° RS - Metropolitana;F;9;02° RS - Metropolitana;CLASSI_FIN;5;2
+EVOLUCAO;4;Alvo Assimetria 4;1938;21° RS - Telemaco Borba;F;1;21° RS - Telemaco Borba;CLASSI_FIN;5;2
+EVOLUCAO;5;Alvo Assimetria 5;1957;10° RS - Cascavel;F;9;10° RS - Cascavel;CLASSI_FIN;5;1
+EVOLUCAO;6;Alvo Assimetria 6;1950;18° RS - Cornelio Procopio;M;4;18° RS - Cornelio Procopio;CLASSI_FIN;4;3
+EVOLUCAO;7;Alvo Assimetria 7;1991;07° RS - Pato Branco;M;1;07° RS - Pato Branco;CLASSI_FIN;5;1
+EVOLUCAO;8;Alvo Assimetria 8;2007;21° RS - Telemaco Borba;M;9;02° RS - Metropolitana;CLASSI_FIN;4;3
+EVOLUCAO;9;Alvo Assimetria 9;1995;02° RS - Metropolitana;F;1;02° RS - Metropolitana;CLASSI_FIN;4;1
+EVOLUCAO;10;Alvo Assimetria 10;1953;02° RS - Metropolitana;M;1;02° RS - Metropolitana;CLASSI_FIN;4;2
+CLASSI_FIN;1;Alvo Assimetria 1;1944;15° RS - Maringa;M;9;15° RS - Maringa;EVOLUCAO;1;5
+CLASSI_FIN;2;Alvo Assimetria 2;1938;15° RS - Maringa;F;4;15° RS - Maringa;EVOLUCAO;1;5
+CLASSI_FIN;3;Alvo Assimetria 3;2005;17° RS - Londrina;M;1;17° RS - Londrina;EVOLUCAO;1;5
+CLASSI_FIN;4;Alvo Assimetria 4;1950;01° RS - Paranagua;M;1;01° RS - Paranagua;EVOLUCAO;1;5
+CLASSI_FIN;5;Alvo Assimetria 5;1965;07° RS - Pato Branco;F;4;07° RS - Pato Branco;EVOLUCAO;1;5
+CLASSI_FIN;6;Alvo Assimetria 6;1986;08° RS - Francisco Beltrao;M;9;08° RS - Francisco Beltrao;EVOLUCAO;1;5
+CLASSI_FIN;7;Alvo Assimetria 7;1956;02° RS - Metropolitana;F;4;02° RS - Metropolitana;EVOLUCAO;1;5
+CLASSI_FIN;8;Alvo Assimetria 8;1968;04° RS - Irati;F;9;02° RS - Metropolitana;EVOLUCAO;1;5
+CLASSI_FIN;9;Alvo Assimetria 9;1939;15° RS - Maringa;M;1;15° RS - Maringa;EVOLUCAO;2;5
+CLASSI_FIN;10;Alvo Assimetria 10;1930;07° RS - Pato Branco;M;1;07° RS - Pato Branco;EVOLUCAO;2;5

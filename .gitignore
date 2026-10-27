@@ -14,13 +14,6 @@ base_original/
 base_filtrada/*
 !base_filtrada/dados_filtro_base.csv
 
-# Resultados em nível de registro: contêm combinações reais de
-# quase-identificadores e atributos sensíveis. São regenerados pelo pipeline;
-# apenas os resultados agregados são versionados.
-src/**/resultados/*.csv
-src/**/resultados/*.xlsx
-!src/**/resultados/analise_comparativa_k.*
-!src/**/resultados/distribuicao_tamanho_grupos_antes_depois.*
-!src/**/resultados/dm_por_*.*
-!src/**/resultados/ncp_por_*.*
-!src/**/resultados/comparativo.*
+# Relatório do TCC e notas de preparação para a banca (mantidos fora do repositório)
+docs/esboços/
+docs/banca/
