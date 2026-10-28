@@ -86,7 +86,7 @@ def main() -> None:
     df_base = pd.read_csv(input_path, sep=";", dtype=str, low_memory=False)
     df_base.columns = [c.strip().replace('"', "") for c in df_base.columns]
 
-    colunas_analise = ["DT_NOTIFIC", "DT_SIN_PRI", "EVOLUCAO", "CLASSI_FIN"]
+    colunas_analise = ["DT_NOTIFIC", "DT_SIN_PRI", "EVOLUCAO", "DT_EVOLUCA", "CLASSI_FIN"]
     obrigatorias = COLUNAS_BASE_OBRIGATORIAS + colunas_analise
     faltantes = [c for c in obrigatorias if c not in df_base.columns]
     if faltantes:
@@ -138,7 +138,7 @@ def main() -> None:
         *[f"nao_atinge_k{k}" for k in K_VALUES],
         "confianca_mesma_pessoa",
         "inconsistente_obito",
-        "posterior_a_obito",
+        "sintomas_apos_obito",
         "conflito_obito_grupo",
         "dispersao_dt_sin",
         "dispersao_dt_notific",

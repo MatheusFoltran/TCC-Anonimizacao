@@ -270,9 +270,9 @@
       "425": 1
     },
     "distribuicao_confianca_mesma_pessoa": {
-      "baixa": 9136,
-      "media": 93,
-      "alta": 59
+      "baixa": 9088,
+      "media": 120,
+      "alta": 80
     },
     "distribuicao_score_dt_sin": {
       "baixa": 9063,

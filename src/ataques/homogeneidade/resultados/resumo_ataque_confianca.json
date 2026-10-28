@@ -23,44 +23,44 @@
     "por_atributo_sensivel": [
       {
         "atributo_sensivel": "EVOLUCAO",
-        "registros_vulneraveis": 85,
-        "grupos_vulneraveis": 42,
+        "registros_vulneraveis": 105,
+        "grupos_vulneraveis": 52,
         "distribuicao_valor_sensivel_revelado": {
           "1": 73,
-          "2": 12
+          "2": 32
         }
       },
       {
         "atributo_sensivel": "CLASSI_FIN",
-        "registros_vulneraveis": 99,
-        "grupos_vulneraveis": 49,
+        "registros_vulneraveis": 142,
+        "grupos_vulneraveis": 70,
         "distribuicao_valor_sensivel_revelado": {
-          "5": 87,
-          "4": 10,
+          "5": 126,
+          "4": 14,
           "2": 2
         }
       }
     ]
   },
   "ataque_inconsistencia_obito": {
-    "descricao": "Registros com inconsistencia de obito: o proprio registro sendo posterior a um obito do seu grupo (posterior_a_obito, por registro — prova de pessoa diferente do obito), ou o grupo ter causas de obito conflitantes (conflito_obito_grupo, por grupo). Esses padroes revelam informacao sobre o desfecho indiretamente. Sempre calculado sobre EVOLUCAO, independente do atributo sensivel avaliado.",
+    "descricao": "Registros com inconsistencia de obito: o proprio registro ter sintomas iniciados depois da data do primeiro obito do seu grupo (sintomas_apos_obito, por registro — nao pode ser a pessoa que faleceu), ou o grupo ter causas de obito conflitantes (conflito_obito_grupo, por grupo). Sempre calculado sobre EVOLUCAO, independente do atributo sensivel avaliado.",
     "criterios": {
-      "posterior_a_obito": "DT_NOTIFIC do registro > min(DT_NOTIFIC onde EVOLUCAO in {2,3} no grupo) — por registro",
+      "sintomas_apos_obito": "DT_SIN_PRI do registro > min(DT_EVOLUCA onde EVOLUCAO in {2,3} no grupo) — por registro",
       "conflito_obito_grupo": "any(EVOLUCAO==2) AND any(EVOLUCAO==3) no mesmo grupo — por grupo, propagado a todos os registros do grupo",
-      "flag_final": "inconsistente_obito = posterior_a_obito OR conflito_obito_grupo"
+      "flag_final": "inconsistente_obito = sintomas_apos_obito OR conflito_obito_grupo"
     },
-    "registros_vulneraveis": 100682,
-    "grupos_vulneraveis": 5589,
+    "registros_vulneraveis": 96030,
+    "grupos_vulneraveis": 5305,
     "registros_por_criterio": {
-      "posterior_a_obito": 96284,
+      "sintomas_apos_obito": 88314,
       "conflito_obito_grupo": 60572,
-      "ambos": 56174
+      "ambos": 52856
     },
     "distribuicao_evolucao": {
-      "1": 61866,
-      "2": 24515,
-      "3": 3175,
-      "9": 1333
+      "1": 58769,
+      "2": 23321,
+      "3": 3166,
+      "9": 1292
     }
   }
 }

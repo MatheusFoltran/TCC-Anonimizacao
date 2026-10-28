@@ -52,6 +52,28 @@ def _formatar_milhar(valor: float, _posicao) -> str:
     return f"{int(valor):,}".replace(",", ".")
 
 
+def _decimal(valor: float, casas: int) -> str:
+    # Vírgula como separador decimal, como no texto do TCC.
+    return f"{valor:.{casas}f}".replace(".", ",")
+
+
+def _formatador_decimal(casas: int, sufixo: str = "") -> mticker.FuncFormatter:
+    def formatar(valor: float, _posicao) -> str:
+        return _decimal(valor, casas) + sufixo
+    return mticker.FuncFormatter(formatar)
+
+
+def _rotulo_kmax(nivel: int) -> str:
+    # O último nível agrupa as classes com 5 ou mais registros.
+    if int(nivel) >= 5:
+        return r"$k_{\max} = 5_{+}$"
+    return rf"$k_{{\max}} = {nivel}$"
+
+
+def _rotulo_t(t: float) -> str:
+    return "$t = " + f"{t:g}".replace(".", "{,}") + "$"
+
+
 # Fig 0: efeito da generalização sobre o agrupamento (antes/depois)
 
 def fig_efeito_generalizacao() -> None:
@@ -73,7 +95,7 @@ def fig_efeito_generalizacao() -> None:
     ax.set_xticklabels(labels, fontsize=9)
     ax.set_ylabel("Registros (%)")
     ax.set_ylim(0, 100)
-    ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("%.0f%%"))
+    ax.yaxis.set_major_formatter(_formatador_decimal(0, "%"))
     ax.grid(axis="y", linestyle="--", linewidth=0.6, alpha=0.6, zorder=1)
     ax.legend(frameon=False, fontsize=8.5, loc="upper center", bbox_to_anchor=(0.5, -0.14), ncol=2)
     for bars in (bars1, bars2):
@@ -82,7 +104,7 @@ def fig_efeito_generalizacao() -> None:
             ax.text(
                 bar.get_x() + bar.get_width() / 2,
                 v + 1.5,
-                f"{v:.1f}%",
+                f"{_decimal(v, 1)}%",
                 ha="center",
                 va="bottom",
                 fontsize=8,
@@ -111,13 +133,13 @@ def fig_k_nao_conformes() -> None:
     ax.set_xlabel("Valor de $k$")
     ax.set_ylabel("Registros não conformes (%)")
     ax.set_ylim(0, max(percentuais) * 1.25)
-    ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("%.1f%%"))
+    ax.yaxis.set_major_formatter(_formatador_decimal(1, "%"))
     ax.grid(axis="y", linestyle="--", linewidth=0.6, alpha=0.6, zorder=1)
     for bar, v in zip(bars, percentuais):
         ax.text(
             bar.get_x() + bar.get_width() / 2,
             v + 0.3,
-            f"{v:.2f}%",
+            f"{_decimal(v, 2)}%",
             ha="center",
             va="bottom",
             fontsize=9,
@@ -136,7 +158,7 @@ def fig_homogeneidade_por_kmax() -> None:
     dados_evolucao = por_atributo["EVOLUCAO"]
     dados_classifin = por_atributo["CLASSI_FIN"]
 
-    labels = [f"k_max={n['k_max_satisfeito']}" for n in dados_evolucao["por_nivel_k"]]
+    labels = [_rotulo_kmax(n["k_max_satisfeito"]) for n in dados_evolucao["por_nivel_k"]]
     pcts_evolucao  = [n["pct_registros_hom"] for n in dados_evolucao["por_nivel_k"]]
     pcts_classifin = [n["pct_registros_hom"] for n in dados_classifin["por_nivel_k"]]
 
@@ -150,7 +172,7 @@ def fig_homogeneidade_por_kmax() -> None:
     ax.set_xticklabels(labels, fontsize=9)
     ax.set_ylabel("Registros homogêneos (%)")
     ax.set_ylim(0, max(pcts_evolucao + pcts_classifin) * 1.25)
-    ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("%.0f%%"))
+    ax.yaxis.set_major_formatter(_formatador_decimal(0, "%"))
     ax.grid(axis="y", linestyle="--", linewidth=0.6, alpha=0.6, zorder=1)
     ax.legend(frameon=False, fontsize=8.5, loc="upper right")
     for bars in (bars1, bars2):
@@ -159,7 +181,7 @@ def fig_homogeneidade_por_kmax() -> None:
             ax.text(
                 bar.get_x() + bar.get_width() / 2,
                 v + 1.5,
-                f"{v:.1f}%",
+                f"{_decimal(v, 1)}%",
                 ha="center",
                 va="bottom",
                 fontsize=7.5,
@@ -179,7 +201,7 @@ def fig_evolucao_classes_homogeneas() -> None:
     dist = dados["distribuicao_valor_sensivel_unico"]
     mapa_desfecho = {
         "1": "Cura\n(1)",
-        "2": "Óbito SRAG\n(2)",
+        "2": "Óbito pelo\nagravo (2)",
         "3": "Óbito outras\ncausas (3)",
         "9": "Ignorado\n(9)",
     }
@@ -207,7 +229,7 @@ def fig_evolucao_classes_homogeneas() -> None:
         ax.text(
             v + 150,
             bar.get_y() + bar.get_height() / 2,
-            f"{v:,}  ({p:.1f}%)".replace(",", "."),
+            f"{v:,}".replace(",", ".") + f"  ({_decimal(p, 1)}%)",
             va="center",
             fontsize=8.5,
         )
@@ -268,7 +290,7 @@ def fig_classifin_classes_homogeneas() -> None:
         ax.text(
             v + 150,
             bar.get_y() + bar.get_height() / 2,
-            f"{v:,}  ({p:.1f}%)".replace(",", "."),
+            f"{v:,}".replace(",", ".") + f"  ({_decimal(p, 1)}%)",
             va="center",
             fontsize=8.5,
         )
@@ -288,7 +310,7 @@ def _fig_l_diversidade_metodo(metodo: str, nome_arquivo: str, ylim_extra: float 
     dados_evolucao = por_atributo["EVOLUCAO"]
     dados_classifin = por_atributo["CLASSI_FIN"]
 
-    labels = [f"l={n['l']}" for n in dados_evolucao["por_l"]]
+    labels = [rf"$\ell = {n['l']}$" for n in dados_evolucao["por_l"]]
     pcts_evolucao  = [n[metodo]["percentual_registros_abaixo_l"] for n in dados_evolucao["por_l"]]
     pcts_classifin = [n[metodo]["percentual_registros_abaixo_l"] for n in dados_classifin["por_l"]]
 
@@ -300,9 +322,9 @@ def _fig_l_diversidade_metodo(metodo: str, nome_arquivo: str, ylim_extra: float 
     bars2 = ax.bar([i + largura / 2 for i in x], pcts_classifin, width=largura, color=COLORS[1], label="CLASSI_FIN", zorder=2)
     ax.set_xticks(list(x))
     ax.set_xticklabels(labels, fontsize=9)
-    ax.set_ylabel("Registros abaixo de $l$ (%)")
+    ax.set_ylabel(r"Registros abaixo de $\ell$ (%)")
     ax.set_ylim(0, max(pcts_evolucao + pcts_classifin) * ylim_extra)
-    ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("%.0f%%"))
+    ax.yaxis.set_major_formatter(_formatador_decimal(0, "%"))
     ax.grid(axis="y", linestyle="--", linewidth=0.6, alpha=0.6, zorder=1)
     ax.legend(frameon=False, fontsize=8.5, loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=2)
     for bars in (bars1, bars2):
@@ -311,7 +333,7 @@ def _fig_l_diversidade_metodo(metodo: str, nome_arquivo: str, ylim_extra: float 
             ax.text(
                 bar.get_x() + bar.get_width() / 2,
                 v + 1.2,
-                f"{v:.1f}%",
+                f"{_decimal(v, 1)}%",
                 ha="center",
                 va="bottom",
                 fontsize=7.5,
@@ -337,7 +359,7 @@ def fig_l_diversidade_comparativo() -> None:
         dados_completo = json.load(f)
     dados = next(item for item in dados_completo["por_metodo"] if item["metodo"] == "distinta")
 
-    labels = [f"l={n['l']}" for n in dados["por_l"]]
+    labels = [rf"$\ell = {n['l']}$" for n in dados["por_l"]]
     protegido_ambos   = [n["percentual_protegido_ambos"] for n in dados["por_l"]]
     vuln_so_evolucao  = [n["percentual_vulneravel_so_evolucao"] for n in dados["por_l"]]
     vuln_so_classifin = [n["percentual_vulneravel_so_classi_fin"] for n in dados["por_l"]]
@@ -360,7 +382,7 @@ def fig_l_diversidade_comparativo() -> None:
                 ax.text(
                     bar.get_x() + bar.get_width() / 2,
                     bar.get_y() + v / 2,
-                    f"{v:.1f}%",
+                    f"{_decimal(v, 1)}%",
                     ha="center",
                     va="center",
                     fontsize=7,
@@ -372,7 +394,7 @@ def fig_l_diversidade_comparativo() -> None:
     ax.set_xticklabels(labels, fontsize=9)
     ax.set_ylabel("Registros (%)")
     ax.set_ylim(0, 100)
-    ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("%.0f%%"))
+    ax.yaxis.set_major_formatter(_formatador_decimal(0, "%"))
     ax.grid(axis="y", linestyle="--", linewidth=0.6, alpha=0.6, zorder=1)
     ax.legend(frameon=False, fontsize=7.5, loc="upper center", bbox_to_anchor=(0.5, -0.18), ncol=2)
     fig.tight_layout()
@@ -404,6 +426,7 @@ def fig_assimetria_razao_risco() -> None:
     ax.set_xticks(list(x))
     ax.set_xticklabels(labels, fontsize=9)
     ax.set_ylabel("Razão de risco (p_local / p_global)")
+    ax.yaxis.set_major_formatter(_formatador_decimal(0))
     ax.axhline(1.0, color=GRAY, linestyle=":", linewidth=1, zorder=1)
     ax.set_ylim(0, max(valores_evolucao + valores_classifin) * 1.3)
     ax.grid(axis="y", linestyle="--", linewidth=0.6, alpha=0.6, zorder=1)
@@ -414,7 +437,7 @@ def fig_assimetria_razao_risco() -> None:
             ax.text(
                 bar.get_x() + bar.get_width() / 2,
                 v + 0.1,
-                f"{v:.2f}×",
+                f"{_decimal(v, 2)}×",
                 ha="center",
                 va="bottom",
                 fontsize=8,
@@ -449,7 +472,7 @@ def fig_assimetria_risco_elevado() -> None:
     ax.set_xlabel("Razão de risco mínima (p_local / p_global)")
     ax.set_ylabel("Registros com razão de risco acima do limiar (%)")
     ax.set_ylim(0, max(pcts_evolucao + pcts_classifin) * 1.35)
-    ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("%.1f%%"))
+    ax.yaxis.set_major_formatter(_formatador_decimal(1, "%"))
     ax.grid(axis="y", linestyle="--", linewidth=0.6, alpha=0.6, zorder=1)
     ax.legend(frameon=False, fontsize=8.5, loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=2)
     for bars in (bars1, bars2):
@@ -458,7 +481,7 @@ def fig_assimetria_risco_elevado() -> None:
             ax.text(
                 bar.get_x() + bar.get_width() / 2,
                 v + 0.4,
-                f"{v:.2f}%",
+                f"{_decimal(v, 2)}%",
                 ha="center",
                 va="bottom",
                 fontsize=8,
@@ -477,7 +500,7 @@ def fig_t_proximidade_violacao() -> None:
     dados_evolucao = por_atributo["EVOLUCAO"]
     dados_classifin = por_atributo["CLASSI_FIN"]
 
-    labels = [f"t={n['t']:g}" for n in dados_evolucao["por_t"]]
+    labels = [_rotulo_t(n["t"]) for n in dados_evolucao["por_t"]]
     pcts_evolucao  = [n["percentual_registros_viola_t"] for n in dados_evolucao["por_t"]]
     pcts_classifin = [n["percentual_registros_viola_t"] for n in dados_classifin["por_t"]]
 
@@ -491,7 +514,7 @@ def fig_t_proximidade_violacao() -> None:
     ax.set_xticklabels(labels, fontsize=9)
     ax.set_ylabel("Registros que violam $t$-proximidade (%)")
     ax.set_ylim(0, max(pcts_evolucao + pcts_classifin) * 1.15)
-    ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("%.0f%%"))
+    ax.yaxis.set_major_formatter(_formatador_decimal(0, "%"))
     ax.grid(axis="y", linestyle="--", linewidth=0.6, alpha=0.6, zorder=1)
     ax.legend(frameon=False, fontsize=8.5, loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=2)
     for bars in (bars1, bars2):
@@ -500,7 +523,7 @@ def fig_t_proximidade_violacao() -> None:
             ax.text(
                 bar.get_x() + bar.get_width() / 2,
                 v + 1.2,
-                f"{v:.1f}%",
+                f"{_decimal(v, 1)}%",
                 ha="center",
                 va="bottom",
                 fontsize=7.5,
@@ -519,7 +542,7 @@ def fig_t_proximidade_por_kmax() -> None:
     dados_evolucao = por_atributo["EVOLUCAO"]
     dados_classifin = por_atributo["CLASSI_FIN"]
 
-    labels = [f"k_max={n['k_max_satisfeito']}" for n in dados_evolucao["por_k_max"]]
+    labels = [_rotulo_kmax(n["k_max_satisfeito"]) for n in dados_evolucao["por_k_max"]]
     emd_evolucao  = [n["emd_media"] for n in dados_evolucao["por_k_max"]]
     emd_classifin = [n["emd_media"] for n in dados_classifin["por_k_max"]]
 
@@ -532,6 +555,7 @@ def fig_t_proximidade_por_kmax() -> None:
     ax.set_xticks(list(x))
     ax.set_xticklabels(labels, fontsize=9)
     ax.set_ylabel("EMD média do bloco")
+    ax.yaxis.set_major_formatter(_formatador_decimal(1))
     ax.set_ylim(0, max(emd_evolucao + emd_classifin) * 1.25)
     ax.grid(axis="y", linestyle="--", linewidth=0.6, alpha=0.6, zorder=1)
     ax.legend(frameon=False, fontsize=8.5, loc="upper right")
@@ -541,7 +565,7 @@ def fig_t_proximidade_por_kmax() -> None:
             ax.text(
                 bar.get_x() + bar.get_width() / 2,
                 v + 0.01,
-                f"{v:.3f}",
+                _decimal(v, 3),
                 ha="center",
                 va="bottom",
                 fontsize=7.5,
@@ -557,7 +581,7 @@ def fig_t_proximidade_comparativo() -> None:
     with open(RESULTADOS_T / "resumo_t_proximidade_comparativo.json", encoding="utf-8") as f:
         dados = json.load(f)
 
-    labels = [f"t={n['t']:g}" for n in dados["por_t"]]
+    labels = [_rotulo_t(n["t"]) for n in dados["por_t"]]
     protegido_ambos   = [n["percentual_protegido_ambos"] for n in dados["por_t"]]
     vuln_so_evolucao  = [n["percentual_vulneravel_so_evolucao"] for n in dados["por_t"]]
     vuln_so_classifin = [n["percentual_vulneravel_so_classi_fin"] for n in dados["por_t"]]
@@ -580,7 +604,7 @@ def fig_t_proximidade_comparativo() -> None:
                 ax.text(
                     bar.get_x() + bar.get_width() / 2,
                     bar.get_y() + v / 2,
-                    f"{v:.1f}%",
+                    f"{_decimal(v, 1)}%",
                     ha="center",
                     va="center",
                     fontsize=7,
@@ -592,7 +616,7 @@ def fig_t_proximidade_comparativo() -> None:
     ax.set_xticklabels(labels, fontsize=9)
     ax.set_ylabel("Registros (%)")
     ax.set_ylim(0, 100)
-    ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("%.0f%%"))
+    ax.yaxis.set_major_formatter(_formatador_decimal(0, "%"))
     ax.grid(axis="y", linestyle="--", linewidth=0.6, alpha=0.6, zorder=1)
     ax.legend(frameon=False, fontsize=7.5, loc="upper center", bbox_to_anchor=(0.5, -0.18), ncol=2)
     fig.tight_layout()
@@ -621,13 +645,13 @@ def fig_dm_k() -> None:
     ax.set_xticklabels(labels, fontsize=9)
     ax.set_ylabel("DM normalizado (%)")
     ax.set_ylim(0, 115)
-    ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("%.0f%%"))
+    ax.yaxis.set_major_formatter(_formatador_decimal(0, "%"))
     ax.grid(axis="y", linestyle="--", linewidth=0.6, alpha=0.6, zorder=1)
     ax.legend(frameon=False, fontsize=8.5, loc="upper center", bbox_to_anchor=(0.5, -0.14), ncol=2)
     for bars in (bars1, bars2):
         for bar in bars:
             v = bar.get_height()
-            ax.text(bar.get_x() + bar.get_width() / 2, v + 1.5, f"{v:.1f}%", ha="center", va="bottom", fontsize=8)
+            ax.text(bar.get_x() + bar.get_width() / 2, v + 1.5, f"{_decimal(v, 1)}%", ha="center", va="bottom", fontsize=8)
     fig.tight_layout()
     _salvar(fig, "fig_dm_k")
     plt.close(fig)
@@ -666,13 +690,13 @@ def fig_dm_comparativo() -> None:
     ax.set_xticklabels(labels, fontsize=8.5)
     ax.set_ylabel("DM normalizado (%)")
     ax.set_ylim(0, max(pcts_evolucao + pcts_classifin) * 1.25)
-    ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("%.0f%%"))
+    ax.yaxis.set_major_formatter(_formatador_decimal(0, "%"))
     ax.grid(axis="y", linestyle="--", linewidth=0.6, alpha=0.6, zorder=1)
     ax.legend(frameon=False, fontsize=8.5, loc="upper right")
     for bars in (bars1, bars2):
         for bar in bars:
             v = bar.get_height()
-            ax.text(bar.get_x() + bar.get_width() / 2, v + 1.5, f"{v:.1f}%", ha="center", va="bottom", fontsize=7.5)
+            ax.text(bar.get_x() + bar.get_width() / 2, v + 1.5, f"{_decimal(v, 1)}%", ha="center", va="bottom", fontsize=7.5)
     fig.tight_layout()
     _salvar(fig, "fig_dm_comparativo")
     plt.close(fig)
@@ -699,13 +723,13 @@ def fig_ncp_k() -> None:
     ax.set_xticklabels(labels, fontsize=9)
     ax.set_ylabel("NCP normalizado (%)")
     ax.set_ylim(0, 115)
-    ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("%.0f%%"))
+    ax.yaxis.set_major_formatter(_formatador_decimal(0, "%"))
     ax.grid(axis="y", linestyle="--", linewidth=0.6, alpha=0.6, zorder=1)
     ax.legend(frameon=False, fontsize=8.5, loc="upper center", bbox_to_anchor=(0.5, -0.14), ncol=2)
     for bars in (bars1, bars2):
         for bar in bars:
             v = bar.get_height()
-            ax.text(bar.get_x() + bar.get_width() / 2, v + 1.5, f"{v:.1f}%", ha="center", va="bottom", fontsize=8)
+            ax.text(bar.get_x() + bar.get_width() / 2, v + 1.5, f"{_decimal(v, 1)}%", ha="center", va="bottom", fontsize=8)
     fig.tight_layout()
     _salvar(fig, "fig_ncp_k")
     plt.close(fig)
@@ -744,13 +768,13 @@ def fig_ncp_comparativo() -> None:
     ax.set_xticklabels(labels, fontsize=8.5)
     ax.set_ylabel("NCP normalizado (%)")
     ax.set_ylim(0, max(pcts_evolucao + pcts_classifin) * 1.25)
-    ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("%.0f%%"))
+    ax.yaxis.set_major_formatter(_formatador_decimal(0, "%"))
     ax.grid(axis="y", linestyle="--", linewidth=0.6, alpha=0.6, zorder=1)
     ax.legend(frameon=False, fontsize=8.5, loc="upper right")
     for bars in (bars1, bars2):
         for bar in bars:
             v = bar.get_height()
-            ax.text(bar.get_x() + bar.get_width() / 2, v + 1.5, f"{v:.1f}%", ha="center", va="bottom", fontsize=7.5)
+            ax.text(bar.get_x() + bar.get_width() / 2, v + 1.5, f"{_decimal(v, 1)}%", ha="center", va="bottom", fontsize=7.5)
     fig.tight_layout()
     _salvar(fig, "fig_ncp_comparativo")
     plt.close(fig)

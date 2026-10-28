@@ -161,31 +161,32 @@ def executar_pipeline(df: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
     )
     df["faixa_dispersao_dt_sin"] = df["grupo_id"].map(faixa_sin)
 
-    # Inconsistência de óbito: posterior_a_obito é por REGISTRO (notificação
-    # após o óbito do grupo -> prova que é pessoa diferente); conflito_obito_grupo
-    # é por GRUPO (óbito por SRAG e por outras causas juntos -> mutuamente
-    # exclusivas para uma única pessoa).
+    # Inconsistência de óbito: sintomas_apos_obito é por REGISTRO (sintomas
+    # iniciados depois da data do primeiro óbito do grupo -> não pode ser a
+    # pessoa que faleceu); conflito_obito_grupo é por GRUPO (óbito por SRAG e
+    # por outras causas juntos -> incompatíveis para uma única pessoa).
+    # A data de notificação não serve como critério: fichas da mesma pessoa
+    # podem ser notificadas depois do óbito.
     evolucao = df["EVOLUCAO"].astype(str).str.strip().str.lower()
     is_obito_srag   = evolucao.isin(["obito", "óbito", "2"])
     is_obito_outras = evolucao.isin(["obito por outras causas", "óbito por outras causas", "3"])
+    dt_obito = pd.to_datetime(df["DT_EVOLUCA"], errors="coerce").where(is_obito_srag | is_obito_outras)
 
-    primeira_data_obito_grupo = (
-        dt_notific.where(is_obito_srag | is_obito_outras).groupby(df["grupo_id"]).transform("min")
-    )
-    df["posterior_a_obito"] = (dt_notific > primeira_data_obito_grupo) & primeira_data_obito_grupo.notna()
+    primeira_data_obito_grupo = dt_obito.groupby(df["grupo_id"]).transform("min")
+    df["sintomas_apos_obito"] = (dt_sin > primeira_data_obito_grupo) & primeira_data_obito_grupo.notna()
 
     conflito_por_grupo = is_obito_srag.groupby(df["grupo_id"]).any() & is_obito_outras.groupby(df["grupo_id"]).any()
     conflito_por_grupo.index.name = "grupo_id"
     df["conflito_obito_grupo"] = df["grupo_id"].map(conflito_por_grupo)
 
-    df["inconsistente_obito"] = df["posterior_a_obito"] | df["conflito_obito_grupo"]
+    df["inconsistente_obito"] = df["sintomas_apos_obito"] | df["conflito_obito_grupo"]
 
     # Classificação de confiança
     tamanho_por_grupo  = df.groupby("grupo_id")["DT_NOTIFIC"].size()
     grupos_candidatos  = tamanho_por_grupo[tamanho_por_grupo > 1].index
     score_sin_grp    = df.groupby("grupo_id")["score_dt_sin"].first()
     score_notific_grp = df.groupby("grupo_id")["score_dt_notific"].first()
-    # Se QUALQUER registro prova ser pessoa diferente (posterior_a_obito) ou
+    # Se QUALQUER registro prova ser pessoa diferente (sintomas_apos_obito) ou
     # há conflito de causas, o grupo inteiro deixa de ser plausível como
     # duplicata única.
     inconsistencia_grupo = df.groupby("grupo_id")["inconsistente_obito"].any()

@@ -75,9 +75,9 @@
         ]
       },
       "distribuicao_confianca_grupos_homogeneos": {
-        "baixa": 2397,
-        "media": 47,
-        "alta": 42
+        "baixa": 2377,
+        "media": 57,
+        "alta": 52
       }
     },
     {
@@ -154,9 +154,9 @@
         ]
       },
       "distribuicao_confianca_grupos_homogeneos": {
-        "baixa": 3183,
-        "media": 73,
-        "alta": 49
+        "baixa": 3139,
+        "media": 96,
+        "alta": 70
       }
     }
   ]

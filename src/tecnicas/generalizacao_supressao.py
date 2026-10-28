@@ -75,7 +75,7 @@ def main() -> None:
     df = pd.read_csv(input_path, sep=";", dtype=str, low_memory=False)
     df.columns = [c.strip().replace('"', "") for c in df.columns]
 
-    colunas_analise = ["DT_NOTIFIC", "DT_SIN_PRI", "EVOLUCAO", "CLASSI_FIN"]
+    colunas_analise = ["DT_NOTIFIC", "DT_SIN_PRI", "EVOLUCAO", "DT_EVOLUCA", "CLASSI_FIN"]
     obrigatorias = COLUNAS_BASE_OBRIGATORIAS + colunas_analise
     faltantes = [c for c in obrigatorias if c not in df.columns]
     if faltantes:

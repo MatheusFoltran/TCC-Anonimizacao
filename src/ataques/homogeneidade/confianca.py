@@ -115,32 +115,31 @@ def montar_resumo_inconsistencia(df_inconsistencia: pd.DataFrame) -> dict:
             for ev, v in df_inconsistencia["EVOLUCAO"].value_counts().to_dict().items()
         }
 
-    n_posterior = n_conflito = n_ambos = 0
-    if n and "posterior_a_obito" in df_inconsistencia.columns and "conflito_obito_grupo" in df_inconsistencia.columns:
-        mask_pos = df_inconsistencia["posterior_a_obito"].astype(str).str.lower().isin(["true", "1"])
+    n_sintomas = n_conflito = n_ambos = 0
+    if n and "sintomas_apos_obito" in df_inconsistencia.columns and "conflito_obito_grupo" in df_inconsistencia.columns:
+        mask_sint = df_inconsistencia["sintomas_apos_obito"].astype(str).str.lower().isin(["true", "1"])
         mask_conf = df_inconsistencia["conflito_obito_grupo"].astype(str).str.lower().isin(["true", "1"])
-        n_posterior = int(mask_pos.sum())
+        n_sintomas = int(mask_sint.sum())
         n_conflito = int(mask_conf.sum())
-        n_ambos = int((mask_pos & mask_conf).sum())
+        n_ambos = int((mask_sint & mask_conf).sum())
 
     return {
         "descricao": (
-            "Registros com inconsistencia de obito: o proprio registro sendo posterior "
-            "a um obito do seu grupo (posterior_a_obito, por registro — prova de pessoa "
-            "diferente do obito), ou o grupo ter causas de obito conflitantes "
-            "(conflito_obito_grupo, por grupo). Esses padroes revelam informacao sobre "
-            "o desfecho indiretamente. Sempre calculado sobre EVOLUCAO, independente do "
-            "atributo sensivel avaliado."
+            "Registros com inconsistencia de obito: o proprio registro ter sintomas "
+            "iniciados depois da data do primeiro obito do seu grupo (sintomas_apos_obito, "
+            "por registro — nao pode ser a pessoa que faleceu), ou o grupo ter causas de "
+            "obito conflitantes (conflito_obito_grupo, por grupo). Sempre calculado sobre "
+            "EVOLUCAO, independente do atributo sensivel avaliado."
         ),
         "criterios": {
-            "posterior_a_obito": "DT_NOTIFIC do registro > min(DT_NOTIFIC onde EVOLUCAO in {2,3} no grupo) — por registro",
+            "sintomas_apos_obito": "DT_SIN_PRI do registro > min(DT_EVOLUCA onde EVOLUCAO in {2,3} no grupo) — por registro",
             "conflito_obito_grupo": "any(EVOLUCAO==2) AND any(EVOLUCAO==3) no mesmo grupo — por grupo, propagado a todos os registros do grupo",
-            "flag_final": "inconsistente_obito = posterior_a_obito OR conflito_obito_grupo",
+            "flag_final": "inconsistente_obito = sintomas_apos_obito OR conflito_obito_grupo",
         },
         "registros_vulneraveis": n,
         "grupos_vulneraveis": grupos,
         "registros_por_criterio": {
-            "posterior_a_obito": n_posterior,
+            "sintomas_apos_obito": n_sintomas,
             "conflito_obito_grupo": n_conflito,
             "ambos": n_ambos,
         },

@@ -20,6 +20,7 @@ COLUNAS_BASE = [
     "CO_RG_RESI",
     "CO_MUN_RES",
     "EVOLUCAO",
+    "DT_EVOLUCA",
     "CLASSI_FIN",
 ]
 

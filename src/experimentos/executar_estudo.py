@@ -34,7 +34,7 @@ def main() -> None:
     df = pd.read_csv(input_path, sep=";", dtype=str, low_memory=False)
     df.columns = [c.strip().replace('"', "") for c in df.columns]
 
-    colunas_analise = ["DT_NOTIFIC", "DT_SIN_PRI", "EVOLUCAO", "CLASSI_FIN"]
+    colunas_analise = ["DT_NOTIFIC", "DT_SIN_PRI", "EVOLUCAO", "DT_EVOLUCA", "CLASSI_FIN"]
     obrigatorias = COLUNAS_BASE_OBRIGATORIAS + colunas_analise
     faltantes = [c for c in obrigatorias if c not in df.columns]
     if faltantes:
@@ -67,7 +67,7 @@ def main() -> None:
         .astype("int64")
         .to_dict()
     )
-    # inconsistente_obito varia por registro (posterior_a_obito); o grupo conta
+    # inconsistente_obito varia por registro (sintomas_apos_obito); o grupo conta
     # como inconsistente se tiver ao menos um registro marcado.
     inconsistencia_resumo = df.groupby("grupo_id")["inconsistente_obito"].any()
     distribuicao_score = distribuicao_scores(candidatos)

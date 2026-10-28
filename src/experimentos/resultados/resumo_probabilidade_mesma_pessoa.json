@@ -64,9 +64,9 @@
       "6": 3
     },
     "distribuicao_confianca_mesma_pessoa": {
-      "baixa": 5836,
-      "media": 398,
-      "alta": 726
+      "baixa": 5703,
+      "media": 455,
+      "alta": 802
     },
     "distribuicao_score_dt_sin": {
       "baixa": 5492,
@@ -87,8 +87,8 @@
     },
     "media_dispersao_dt_sin": 4.2235,
     "media_dispersao_dt_notific": 4.3809,
-    "taxa_grupos_inconsistentes_obito": 0.0099,
-    "total_grupos_inconsistentes_obito": 1279,
-    "total_registros_caso_forte": 1456
+    "taxa_grupos_inconsistentes_obito": 0.0073,
+    "total_grupos_inconsistentes_obito": 945,
+    "total_registros_caso_forte": 1608
   }
 }
